@@ -7,7 +7,7 @@
     <script src="https://use.typekit.net/yqy6cfi.js"></script>
     <script>try{Typekit.load({ async: true });}catch(e){}</script>
   </head>
-  <body>
+  <body class="{% if page.url == '/' %}homepage{% endif %}">
     <header class="site-header">
       <div class="info">
         <p><a href="/" class="name"><strong>JSMonk</strong></a>, writing on javaScript, software techniques and tools.</p>
