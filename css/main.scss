@@ -1,0 +1,154 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+@charset "utf-8";
+
+// Our variables
+$base-font-family: "yrsa", georgia, serif;
+$base-font-size:   16px;
+$base-font-weight: 400;
+$small-font-size:  $base-font-size * 0.875;
+$base-line-height: 1.5;
+
+$spacing-unit:     30px;
+
+$text-color:       #111;
+$background-color: #fdfdfd;
+$brand-color:      #2a7ae2;
+
+$grey-color:       #828282;
+$grey-color-light: lighten($grey-color, 40%);
+$grey-color-dark:  darken($grey-color, 25%);
+
+// Width of the content area
+$content-width:    800px;
+
+$on-palm:          600px;
+$on-laptop:        800px;
+
+// Minima also includes a mixin for defining media queries.
+// Use media queries like this:
+// @include media-query($on-palm) {
+//     .wrapper {
+//         padding-right: $spacing-unit / 2;
+//         padding-left: $spacing-unit / 2;
+//     }
+// }
+
+// Import partials from the `minima` theme.
+@import "minima";
+
+body {
+  line-height: 1.5em;
+  color: rgba(0, 0, 0 ,.65);
+}
+
+a,
+a:visited,
+a.site-title,
+a.site-title:visited {
+  color: rgba(0, 0, 0, .8);
+  border: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+pre,
+code {
+  background-color: #fdf6e3;
+  border: none;
+}
+
+.highlight {
+  margin-bottom: 30px;
+}
+
+.post-title {
+  font-size: 35px;
+  font-weight: bold;
+  color: rgba(0, 0, 0 ,.8);
+}
+
+.post .post-meta {
+  font-size: 28px;
+  color: rgba(0, 0, 0 ,.5);
+}
+
+.site-header {
+  border: none;
+  min-height: auto;
+  position: fixed;
+  left: 0;
+  height: 100%;
+  width: 30%;
+  border-right: 1px solid #ddd;
+  left: 0;
+  top: 0;
+  height: 100%;
+
+  .info {
+    position: absolute;
+    top: 80px;
+    padding: 0 30px 0 50px;
+
+    p {
+      line-height:1.35em;
+    }
+  }
+}
+
+.page-content {
+  padding: 75px 10% 20px 0;
+  float: right;
+  width: 50%;
+  font-weight: 400;
+  p {
+    margin-bottom: 25px;
+  }
+
+  .post-content {
+  }
+}
+
+.post-list {
+  li {
+    border-bottom: 1px solid #ddd;
+    position: relative;
+    margin-bottom: 20px;
+    h2 {
+      font-weight:bold;
+    }
+    .post-meta {
+      float: right;
+      margin-top: 4px;
+    }
+  }
+}
+
+
+@include media-query($on-palm) {
+  .site-header {
+    width: 80%;
+    position: relative;
+    margin: 0 10% 0;
+    border: none;
+    .info {
+      margin: 0 0 60px;
+      padding: 0;
+      position: relative;
+    }
+  }
+
+  .page-content {
+    padding: 75px 10% 20px;
+    float: right;
+    width: 80%;
+    font-weight: 400;
+    position: relative;
+  }
+}
+
+
+
