@@ -10,7 +10,7 @@ $base-font-weight: 400;
 $small-font-size:  $base-font-size * 0.875;
 $base-line-height: 1.5;
 
-$base-background-color: #edf0fb;
+$base-background-color: #F0E8FA;
 $base-border-color: rgba(0, 0, 0 ,.1);
 
 $spacing-unit:     30px;
@@ -29,6 +29,13 @@ $content-width:    800px;
 $on-palm:          600px;
 $on-laptop:        800px;
 
+
+$blue: #F0F5FA;
+$green: #EBF5EF;
+$red: #FCF0F0;
+$yellow: #FAF9EB;
+
+
 // Minima also includes a mixin for defining media queries.
 // Use media queries like this:
 // @include media-query($on-palm) {
@@ -46,8 +53,35 @@ body {
   color: rgba(0, 0, 0 ,.65);
 }
 
-body.homepage {
-  background-color: $base-background-color;
+body {
+
+  &.red {
+    .site-header,
+    &.homepage {
+      background-color: $red; 
+    }
+  }
+
+  &.green {
+    .site-header,
+    &.homepage {
+      background-color: $green; 
+    }
+  }
+
+  &.blue {
+    .site-header,
+    &.homepage {
+      background-color: $blue; 
+    }
+  }
+
+  &.yellow {
+    .site-header,
+    &.homepage {
+      background-color: $yellow; 
+    }
+  }
 }
 
 a,
@@ -93,7 +127,6 @@ code {
   left: 0;
   top: 0;
   height: 100%;
-  background-color: $base-background-color;
   border-right: 1px solid $base-border-color;
 
   .info {
@@ -129,6 +162,21 @@ code {
     .post-meta {
       float: right;
       margin-top: 4px;
+    }
+  }
+}
+
+footer {
+  border-top: 1px solid $base-border-color;
+  padding-top: 15px;
+  ul {
+    margin: 0;
+    li {
+      list-style-type: none;
+      display: inline-block;
+      font-size: smaller;
+      color: rgba(0, 0, 0, 0.5);
+      margin-right: 10px;
     }
   }
 }

@@ -4,19 +4,20 @@
     <meta charset="utf-8">
     <title>Home Page</title>
     <link rel="stylesheet" href="/css/main.css">
+    <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+    <script src="/js/main.js"></script>
+
     <script src="https://use.typekit.net/yqy6cfi.js"></script>
     <script>try{Typekit.load({ async: true });}catch(e){}</script>
   </head>
   <body class="{% if page.url == '/' %}homepage{% endif %}">
     <header class="site-header">
       <div class="info">
-        <p><a href="/" class="name"><strong>JSMonk</strong></a>, writing on javaScript, software techniques and tools.</p>
-          <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+        <p><a href="/" class="name"><strong>JSMonk</strong></a>, writing on javaScript, software techniques and tools. </p>
       </div>
     </header>
     <div class="page-content">
       {{ content }}
     </div>
-
   </body>
 </html>
