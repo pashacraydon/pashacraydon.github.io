@@ -4,16 +4,15 @@ layout: default
 
 <div class="home">
 
-  <h3 class="page-heading">Articles</h3>
-
   <ul class="post-list">
     {% for post in site.posts %}
       <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+        <p class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</p>
 
         <h2>
           <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title | escape }}</a>
         </h2>
+        {{ post.excerpt }}
       </li>
     {% endfor %}
   </ul>

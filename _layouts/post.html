@@ -9,9 +9,7 @@ layout: default
       <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time>
     </p>
   </header>
-  <div class="post-content" itemprop="articleBody">
+  <div class="post-content article-body" itemprop="articleBody">
     {{ content }}
   </div>
 </article>
-
-{% include footer.html %}
