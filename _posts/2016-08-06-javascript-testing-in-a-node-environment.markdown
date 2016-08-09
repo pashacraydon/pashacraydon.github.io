@@ -57,7 +57,7 @@ You can create another file to run all of the tests at once. This file will just
 
 # Generating html fixtures
 
-Some of my javaScript used html on the page. These were in Django templates. I decided I would dynamically generate these templates using a Django management command. I could run this command before I run the mocha tests in jenkins. This way the tests will fail if anyone modifies the templates in such a way as to break the javaScript.
+Some of my javaScript uses html on the page, for example validating fields in a form. For me, these were in Django templates. I decided I would dynamically generate these templates using a Django management command. I could run this command before I run the mocha tests in jenkins. This way the tests will fail if anyone modifies the templates in such a way as to break the javaScript.
 
 {% highlight python %}
   import os
@@ -97,9 +97,9 @@ Some of my javaScript used html on the page. These were in Django templates. I d
           self.build_fixture_html(self.__class__.fixture, self.get_content())
 {% endhighlight %}
 
-This is my base python class for creating a blank file, generating a Django template from a fake request into a string and writing it's output into this blank file.
+This is my base python class for creating a blank file, outputting a Django template into a string and then writing it into this blank file.
 
-Here is how I use this base class to render a Django template as a string, which my base class writes to a blank file.
+I pass my Django template to this base class to write these files.
 
 {% highlight python %}
   from forms import FeedbackForm
@@ -121,12 +121,11 @@ Another function in this same python file creates the class and actually calls t
       feedbackForm.render()
 {% endhighlight %}
 
-# Generating fixtures dynamically
+# Running a Django management command
 
 In order to generate these fixtures everytime I need them, I need to run a Django management command.
 
 {% highlight python %}
-  # encoding: utf-8
   from django.core.management.base import BaseCommand
   from tests.mocha.js_fixtures import buildFixtures
 
@@ -141,7 +140,7 @@ I called this file ```generate_mocha_fixtures.py```. Now I can build all my moch
 
 # Including fixtures in tests
 
-Now that Django can generate my test fixture files, I can simply include these files in my tests using a javaScript template engine like lodash.
+Now that Django can generate my test fixture files, I can simply include these files in my tests using a javaScript template engine like lodash. For example, the setup and teardown of my mocha tests may include the following.
 
 {% highlight javascript %}
   import feedbackFormTpl from './fixture/feedback_form.html';
@@ -164,7 +163,11 @@ You can include a ```debug``` option when running mocha and the tests will stop 
   mocha debug static/test/mocha/run.js
 {% endhighlight %}
 
-Debugging in node is a bit different then in the browser. Maybe you have written a bit of python before and are familiar with [pdb](https://docs.python.org/2/library/pdb.html). It is a little bit like that. There is some great documentation on the matter [here](https://nodejs.org/api/debugger.html). To get started, run the debugger command with some ```debugger;``` breakpoints in your code. Type ```cont``` to go to the next breakpoint or type ```repl```, then type some variables, their values should be directly outputted back to you.
+Debugging in node is a bit different then in the browser. Maybe you have written a bit of python before and are familiar with [pdb](https://docs.python.org/2/library/pdb.html). It is a little bit like that. 
+
+There is some great documentation on the matter [here](https://nodejs.org/api/debugger.html). 
+
+To get started, run the debugger command with some ```debugger;``` breakpoints in your code. Type ```cont``` to go to the next breakpoint or type ```repl```, then type some variables, their values should be directly outputted back to you.
 
 # Using scripts
 
@@ -173,16 +176,45 @@ I like to add my mocha commands as scripts so that they are easy to remember. In
 {% highlight bash %}
   "scripts": {
     "test": "mocha static/test/mocha/run.js --timeout 5000",
-    "test:jenkins": "mocha --recursive -R xunit static/test/mocha/run.js > test-reports.xml --timeout 5000",
     "test:debug": "mocha debug static/test/mocha/run.js",
   },
 {% endhighlight %}
 
 Now I can simply run ```npm run test``` to run all of my mocha tests. The timeout option just raises the limit of time a test has to finish before mocha shuts it down and fails with a 'timeout error'. 
 
-You might have noticed I added a new command, ```npm run test:jenkins```. I run this command in jenkins.
-
 # Adding to jenkins
 
+In jenkins, add a new build and call it something like "mocha-tests". Within the ```build``` section, add a build step to execute shell. Here you should add the script commands jenkins will need to run the tests.
 
+![Banner](/css/images/build-step.png)
+
+The first command will install all the node_modules in ```package.json``` using the ```--production``` flag to indicate that scripts listed under ```devDependencies``` in ```package.json``` should not be installed. I've added two new script command to my ```package.json```.
+
+{% highlight bash %}
+  "scripts": {
+    "build:test:jenkins": "./manage.py generate_mocha_fixtures --settings=settings.mocha && webpack --config webpack.config.test.js --progress --colors",
+    "test:jenkins": "mocha --recursive -R xunit static/test/mocha/run.js > test-reports.xml --timeout 30000"
+  },
+{% endhighlight %}
+
+Running ```npm run build:test:jenkins``` will run my Django management command and generate my html fixtures from Django templates. Following that, I will compile my test files from webpack (this may be an unnecessary step for you).
+
+Running ```npm run test:jenkins``` will write the mocha test results to a ```test-reports.xml``` file in jenkins. Jenkins will use this to properly inform you of failed tests.
+
+Below the build section is a ```Post-build Actions```. I add an action to publish a JUnit test result report. In the test report XMLs, add ```test-reports.xml```.
+
+![Banner](/css/images/xunit.png)
+
+# Finishing up
+
+So is it worth using jsdom for javaScript testing? Among the pros are that it is quite fast. It is easy to run hundreds of tests very often. Also, debugging in node is a nice of pace from working in the browser. 
+
+However, it is worth remembering that jsdom is not a real browser. If your tests rely too much on the DOM, you may be opening yourself up to bugs you can't catch. For me, this is a good challenge to do much less DOM manipulation.
+
+
+{::options parse_block_html="true" /}
+<div class="header-hero">
+![Banner](/css/images/yosemite.jpg)
+<div class="inner"></div>
+</div>
 

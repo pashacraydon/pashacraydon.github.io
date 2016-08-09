@@ -1,10 +1,13 @@
 ---
 layout: page
-title: About
+title: Writing on javaScript, software techniques and tools
 permalink: /about/
 ---
 
-Articles on javaScript, software techniques and tools. 
-
 JSMonk is written by <a href="https://twitter.com/pashasc">Pasha Craydon</a>. A professional software developer in northern California.
 
+{::options parse_block_html="true" /}
+<div class="header-hero">
+![Banner](/css/images/pexels.jpeg)
+<div class="inner"></div>
+</div>
