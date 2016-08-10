@@ -5,9 +5,7 @@ date:   2016-08-06 13:15:34 -0700
 categories: jekyll update
 ---
 
-Jsdom is an implementation of the DOM in javaScript. Because it is a DOM-like API instead of a real browser, your tests can run really quickly. Testing units like QUnit using phantomjs need to spawn browser processes to run their tests which can be very time consuming, especially, if you have hundreds of tests.
-
-Here is how to set it up using python and Django for generating html fixtures, mocha for javaScript testing and sinonjs for stubs and mocks.
+Jsdom is an implementation of the DOM in javaScript. Here is how to set it up using python and Django for generating html fixtures, mocha for javaScript testing and sinonjs for stubs and mocks.
 
 Install the packages from npm.
 
@@ -207,7 +205,7 @@ Below the build section is a ```Post-build Actions```. I add an action to publis
 
 # Finishing up
 
-So is it worth using jsdom for javaScript testing? Among the pros are that it is quite fast. It is easy to run hundreds of tests very often. Also, debugging in node is a nice of pace from working in the browser. 
+So is it worth using jsdom for javaScript testing? Among the pros are that it is quite fast. It is easy to run hundreds of tests very often. Also, debugging in node is a nice change of pace from working in the browser. 
 
 However, it is worth remembering that jsdom is not a real browser. If your tests rely too much on the DOM, you may be opening yourself up to bugs you can't catch. For me, this is a good challenge to do much less DOM manipulation.
 
