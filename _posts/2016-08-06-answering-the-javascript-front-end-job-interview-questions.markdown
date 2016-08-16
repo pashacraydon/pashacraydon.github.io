@@ -1,10 +1,10 @@
 ---
 layout: post
-title:  "JavaScript front-end job interview answers"
+title:  "Short answers for the javaScript front-end job interview questions"
 date:   2016-08-06 13:15:34 -0700
 categories: jekyll update
 ---
-There is a list of front-end job interview [questions](https://github.com/h5bp/Front-end-Developer-Interview-Questions) circling around the internet. In this post I will try to answer the javaScript questions as best I can.
+There is a list of front-end job interview [questions](https://github.com/h5bp/Front-end-Developer-Interview-Questions) circling around the internet. In this post I will try to give short and concise answers the javaScript questions as best I can.
 
 # Explain event delegation
 
