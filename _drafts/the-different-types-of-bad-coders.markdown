@@ -26,9 +26,13 @@ None of these things are important to this type of coder.
 
 This type of coder writes code as quickly as possible because they want to be 'productive'. They probably also get rewarded for it by their project managers who tell them that they are ninjas or the sort. 
 
+# The coder that couples many parts together
+
+This type of coder makes it really easy to make a simple change in the codebase and unexplicably break things. This usually happens under the guise of being "DRY" or not-repeating-themselves. 
+
 # Summary
 
-Bad coders should pay attention to process
+Bad coders don't think that process is very important. 
 
 
 {::options parse_block_html="true" /}

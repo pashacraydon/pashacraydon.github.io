@@ -8,17 +8,11 @@ There is a list of front-end job interview [questions](https://github.com/h5bp/F
 
 # Explain event delegation
 
-In order to understand event delegation we should first understand how event propagation works in javaScript.
+The Document Object Model (a.k.a the DOM) is a hierarchy of node objects best expressed as a tree. When an event is fired on a node in this tree, it is first fired on the window Object and travels down this tree firing it's event on every node along the way. This is known as the 'capturing' phase of an event. 
 
-The Document Object Model (a.k.a the DOM) is a hierarchy of node objects best expressed as a tree. Think of the ```<window>``` element in html as the trunk of this tree and the indented markup of HTML as it's branches. 
+When it reaches the target event, it fires again and then propagates back up the tree firing again on every node along the way. This is known as the 'bubbling' phase.
 
-In javaScript, an event propagates through this tree firing the same event on each node in a ```capturing``` (DOM tree trunk to branches) and ```bubbling``` (DOM tree branches to trunk) phase. 
-
-The ```capture``` phase refers to the first process when a ```click``` event is fired where the event begins at the window object and flows down the DOM tree firing the click event on each node in the tree until it reaches the target event. 
-
-The click event then gets fired on the target element itself and then begins the ```bubbling``` phase. The event propagates back up the DOM tree firing the event again on each node until it returns to the window object.
-
-*Event delegation* means taking advantage of this event flow. For example, you can attach a ```click``` listener to an element high in the DOM tree in order to act on click events lower in the DOM tree.
+*Event delegation* means taking advantage of the flow of an event in javaScript.
 
 A good example of this is attaching a ```click``` listener to the ```<body>``` element to listen for click events that occur outside a dropdown menu that is open in order to close it.
 

@@ -212,7 +212,7 @@ However, it is worth remembering that jsdom is not a real browser. If your tests
 
 {::options parse_block_html="true" /}
 <div class="header-hero">
-![Banner](/css/images/yosemite.jpg)
+![Banner](/css/images/gulls.jpg)
 <div class="inner"></div>
 </div>
 

@@ -95,11 +95,17 @@ a.post-link:visited {
 }
 
 h1,
-h2,
-h3 {
+h2 {
   font-family: 'Lato', sans-serif;
   margin: 0.5em 0 1em;
   color: $black;
+}
+
+.post-content h3 {
+  font-style:italic;
+  font-size: 24px;
+  font-weight: bold;
+  color: $grey;
 }
 
 p {
@@ -242,20 +248,28 @@ footer {
     max-width: 70%;
   }
   .post-title {
-    font-size: 3.5em;
+    font-size: 3em;
   }
 }
 
 
 @include media-query(800px) {
   .post-title {
-    font-size: 3em;
+    font-size: 2.8em;
     color: $black !important;
+    background: transparent none no-repeat scroll 0 0 !important;
   }
   .site-header,
   .page-content {
     margin: 0 auto;
     max-width: 90%;
+  }
+
+  .post-header {
+    padding: 0 !important;
+    .post-meta {
+      margin: 2em 0 2em !important;
+    }
   }
 
   .header-hero {
@@ -289,8 +303,7 @@ footer {
 
 }
 
-.javascript-testing-in-a-node-environment {
-  .site-lead,
+.testing-javascript-with-jsdom-and-django-in-jenkins  {
   .post-title {
     color: #FFF;
   }
@@ -303,16 +316,13 @@ footer {
   }
 }
 
-.the-difference-between-brilliant-and-bad-coders  {
-  .post-title {
-    color: #FFF;
+.build-a-simple-react-with-redux-app   {
+  .post-header {
+    padding: 5em 0 1em;
+    .post-meta {
+      margin: 8em 0 0;
+    }
   }
-  .post-title {
-    background-color: orange;
-  }
-}
-
-.answering-the-javascript-front-end-job-interview-questions {
   .post-title {
     color: #FFF;
   }
