@@ -1,21 +1,38 @@
 ---
 layout: post
-title:  "The difference between brilliant and bad coders"
+title:  "The different types of bad coders."
 date:   2016-08-15 13:15:34 -0700
 categories: jekyll update
 ---
-I've worked with coders of all different skill levels the past couple of years. I've noticed that the really great coders have a few characteristic traits that a bad coder could easily improve to become a better coder. 
+I've worked with coders of all different skill levels. I've noticed that the really great coders have a few characteristic traits that a bad coder could easily improve to become a better coder.
 
-# Great coders write very readable code
+Here is a brief list of the traits that bad coders are stuck in and which keep them writing terrible code.
 
-A bad coder is stuck in there head. They will write function and variables names that make no sense to anyone else but themselves. They also don't think that this bad practice makes very much of a difference. A great coder knows that this is baloney and that writing clean, readable code is the first step to writing code that is maintainable and other people can productively work with. 
+# The coder that writes unreadable code
 
-# Great coders write tests
+This coder will write function and variable names that make no sense to anyone else but themselves. They also don't think that this bad practice makes very much of a difference.
 
-A bad coder thinks that tests are a waste of time. A great coder doesn't think so. A great coder will write tests to demonstrate how their code works, prove that it works, make it regression-proof, make it easier to extend the code in the future. None of this matters to a bad coder.
+A good coder knows that writing clean, readable code is the first step to a maintainable codebase that other people can productively work with. This type of bad coder doesn't understand this or think it's very important.
 
-# Great coders are patient
+# The coder that doesn't write tests
 
-A bad coder rushes through writing new code because they want to be 'productive'. They probably also get rewarded for it and their project managers tell them that they are ninjas or the sort. A great coder takes their time to write features the right way, the first time. They don't fall for the carrot-on-the-stick that is the 'productive ninja' glow of reverence a project manager may bestow for rushing features out the door.
+This type of coder thinks tests are a waste of time.
+
+A good coder will write tests to demonstrate how their code works, prove that it works, make it regression-proof and make it easier to extend the code in the future. 
+
+None of these things are important to this type of coder.
+
+# The coder that rushes through building new features
+
+This type of coder writes code as quickly as possible because they want to be 'productive'. They probably also get rewarded for it by their project managers who tell them that they are ninjas or the sort. 
+
+# Summary
+
+Bad coders should pay attention to process
 
 
+{::options parse_block_html="true" /}
+<div class="header-hero">
+![Banner](/css/images/gulls.jpg)
+<div class="inner"></div>
+</div>

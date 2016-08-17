@@ -8,6 +8,6 @@ JSMonk is written by <a href="https://twitter.com/pashasc">Pasha Craydon</a>. A 
 
 {::options parse_block_html="true" /}
 <div class="header-hero">
-![Banner](/css/images/pexels.jpeg)
+![Banner](/css/images/sea.jpeg)
 <div class="inner"></div>
 </div>

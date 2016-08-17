@@ -73,5 +73,6 @@ In javaScript, the *ownership* of an object is known as the *context*. It can ge
 
 {::options parse_block_html="true" /}
 <div class="header-hero">
+![Banner](/css/images/black-and-white-bridge-wooden.jpg)
 <div class="inner"></div>
 </div>
