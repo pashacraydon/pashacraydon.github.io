@@ -74,6 +74,10 @@ body {
   }
 }
 
+em {
+  font-size: smaller;
+}
+
 
 a,
 a:visited {
@@ -316,7 +320,7 @@ footer {
   }
 }
 
-.build-a-simple-react-with-redux-app   {
+.build-a-simple-app-with-react-and-redux {
   .post-header {
     padding: 5em 0 1em;
     .post-meta {
