@@ -163,7 +163,9 @@ In a Redux app, the best way to change state is through dispatching an action. L
   }
 {% endhighlight %}
 
-After visiting the index page in our app, the route maps the index url to the AppContainer. The lifecycle method ```componentWillMount()``` is invoked right before AppContainer is rendered. ```searchInfo``` is the data needed to make an API request against Google books. Since the url didn't container an index or query because we visited the '/' page, ```searchInfo``` uses some defaults from the ```constants.js``` module. It will look like this;
+After visiting the index page in our app, the route maps the index url to the AppContainer. The lifecycle method ```componentWillMount()``` is invoked right before AppContainer is rendered. 
+
+```searchInfo``` is the data needed to make an API request against Google books. Since the url didn't container an index or query because we visited the '/' page, ```searchInfo``` uses some defaults from the ```constants.js``` module. It will look like this;
 
 {% highlight javascript %}
     let searchInfo = {
@@ -361,16 +363,75 @@ Looking at the above reducer, we can see that dispatching ```getBooksRequest()``
 ```isFetching: true``` so we can tell that the request is happening. 
 ```didInvalidate: false``` so we can say that the data is fresh. But we could use it to dispatch an action to say that the data should be fetched again or to erase the data.
 
-We can dispatch the action ```store.dispatch(getBooksSuccess(response, searchInfo))``` to change ```isFetching``` to false so any spinners we show can go away and we add new books objects to ```booksState.books```.
+*4. api.js*
+
+Functions that facilitate network requests should go in the API file. These functions use Redux Thunk Async Actions to perform requests, dispatch the state of the request then store the response.
+
+You can dispatch an action to facilitate these. For example in ```AppContainer``` earlier we dispatched,
+
+{% highlight javascript %}
+  let searchInfo = {
+    'query': '*',
+    'index': 1,
+    'maxResults': 20
+  };
+
+  store.dispatch(getBooks(searchInfo));
+{% endhighlight %}
+
+```getBooks()``` is an API action.
+
+{% highlight javascript %}
+  export function getBooks(searchInfo) {
+    const { query, maxResults, index } = searchInfo;
+    return function (dispatch) {
+      dispatch(getBooksRequest());
+      return axios.get(`${c.GOOGLE_BOOKS_ENDPOINT}?q=${encodeURIComponent(query)}&startIndex=${index}&maxResults=${maxResults}&projection=full&fields=totalItems,items(id,volumeInfo)`)
+        .then(response => dispatch(getBooksSuccess(response, searchInfo))
+      );
+    }
+  }
+{% endhighlight %}
+
+This function emits two actions. The first action ```dispatch(getBooksRequest());``` will update the books state isFetching to be true so the UI can show a spinner while the request is handled. The second action, ```dispatch(getBooksSuccess(response, searchInfo))``` happens when the request is resolved. It sends the response to the Redux store for storing the books information in the reducer.
+
+*5. index.js*
+
+Modules should expose functions via this file. 
+
+*How the books module index.js exports all of it's files*
+
+{% highlight javascript %}
+  import * as actions from './actions';
+  import * as api from './api';
+  import * as types from './actionTypes';
+  import reducer, { initialState } from './reducer';
+
+  export default { actions, api, reducer, types }
+{% endhighlight %}
+
+You should not directly import functions in modules from other parts of the application to use. This is best practice to avoid recursive imports and keep code decoupled.
+
+For example, this is bad practice;
+
+{% highlight javascript %}
+  import getBooks from 'modules/books/api';
+{% endhighlight %}
+
+This is good practice;
+
+{% highlight javascript %}
+  import * as books from 'modules/books';
+  const { getBooks } = books.api;
+{% endhighlight %}
+
+It is best to create functions in modules that do manipulations and expose them via index.js rathern then have other parts of the app directly import stuff from them to do their own manipulations.
 
 
 
-
-
-
-
+<!--
 {::options parse_block_html="true" /}
 <div class="header-hero">
 ![Banner](/css/images/black-and-white-bridge-wooden.jpg)
 <div class="inner"></div>
-</div>
+</div> -->

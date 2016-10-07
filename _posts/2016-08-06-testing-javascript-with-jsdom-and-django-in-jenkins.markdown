@@ -209,10 +209,10 @@ So is it worth using jsdom for javaScript testing? Among the pros are that it is
 
 However, it is worth remembering that jsdom is not a real browser. If your tests rely too much on the DOM, you may be opening yourself up to bugs you can't catch. For me, this is a good challenge to do much less DOM manipulation.
 
-
+<!--
 {::options parse_block_html="true" /}
 <div class="header-hero">
 ![Banner](/css/images/gulls.jpg)
 <div class="inner"></div>
-</div>
+</div> -->
 
