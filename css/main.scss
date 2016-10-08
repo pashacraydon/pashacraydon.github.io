@@ -30,9 +30,13 @@ $on-palm:          600px;
 $on-laptop:        900px;
 
 
-$black:            rgba(0, 0, 0, 1);
+$black:            rgba(0, 0, 0, .9);
 $light-black:      rgba(0, 0, 0, .7);
 $grey:             rgba(0, 0, 0, 0.35);
+
+$white:            rgba(255, 255, 255, .9);
+$light-white:      rgba(255, 255, 255, .7);
+$lightest-white:   rgba(255, 255, 255, 0.35);
 
 
 // Minima also includes a mixin for defining media queries.
@@ -84,6 +88,10 @@ a:visited {
   color: $black;
   border: none;
   text-decoration: underline;
+}
+
+a:visited {
+  opacity: 0.65;
 }
 
 a:hover {
@@ -174,11 +182,108 @@ code {
 
   .site-lead {
     font-family: "Merriweather", serif;
-    font-size: 24px;
+    font-size: 21px;
     color: $black;
     text-decoration: none;
     position: relative;
     top: 5px;
+    letter-spacing: -1px;
+  }
+}
+
+.homepage {
+  background-color: #7802f7;
+  color: $light-white;
+  .site-header .site-lead {
+    color: $white;
+  }
+  a, a:visited {
+    color: $light-white;
+  }
+  h2 a {
+    color: $white;
+    &:hover {
+      color: $light-white;
+    }
+  }
+  footer ul li {
+    color: $light-white;
+  }
+  .post-meta {
+    color: $lightest-white;
+  }
+  .post-list li {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  footer {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+  }
+}
+
+.about-page {
+  background-color: #f7be02;
+  color: $light-white;
+  .site-header .site-lead {
+    color: $white;
+  }
+  a, a:visited {
+    color: $light-white;
+  }
+  h1 {
+    color: $white;
+  }
+  h2 a {
+    color: $white;
+    &:hover {
+      color: $light-white;
+    }
+  }
+  footer ul li {
+    color: $light-white;
+  }
+  .post-meta {
+    color: $lightest-white;
+  }
+  .post-list li {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  footer {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .photo {
+    max-width: 300px;
+    float: right;
+    img {
+      border-radius: 200px;
+    }
+  }
+
+  .about-photo {
+    position: fixed;
+    top: 0;
+    right: 0;
+    margin: 0;
+    bottom: 0;
+    left: auto;
+    text-align: center;
+    width: auto;
+    height: auto;
+    min-height: 600px;
+    z-index: -1;
+    img {
+      height: 100%;
+      width: auto;
+      position: relative;
+      left: 100%;
+      margin-left: -200%;
+    }
+    p {
+      margin: 0;
+    }
+  }
+  footer {
+    display: none;
   }
 }
 

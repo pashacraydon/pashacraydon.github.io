@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Build a simple app with React and Redux"
+title:  "Building an app with React and Redux"
 date:   2016-08-15 13:15:34 -0700
 categories: jekyll update
 ---
