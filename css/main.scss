@@ -58,6 +58,24 @@ body {
   letter-spacing: -.003em;
 }
 
+/*
+p, a, h1, h2, h3, ul, li {
+  opacity: 0;
+    transition: opacity .5s ease-in-out;
+     -moz-transition: opacity .5s ease-in-out;
+     -webkit-transition: opacity .5s ease-in-out;
+}
+
+.fade-in {
+  p, a, h1, h2, h3, ul, li {
+    opacity: 1;
+    transition: opacity .5s ease-in-out;
+     -moz-transition: opacity .5s ease-in-out;
+     -webkit-transition: opacity .5s ease-in-out;
+  }
+}
+*/
+
 .header-hero {
   position: absolute;
   top: 0;

@@ -7,4 +7,5 @@ $(document).ready(function() {
     rand = Math.floor(Math.random() * colors.length);
   
   $('body').addClass(colors[rand],  1);
+  $('body').addClass('fade-in');
 });

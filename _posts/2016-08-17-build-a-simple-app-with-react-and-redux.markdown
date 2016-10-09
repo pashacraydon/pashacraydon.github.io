@@ -387,22 +387,6 @@ This is right;
 
 If another part of the application needs to dip into a module to manipulate some things, the module should instead expose a function via index.js that does the manipulations that other parts of the app can run instead.
 
-### reducers.js
-
-This file combines all of the reducers from each module for the Redux Connect store. When state changes happen in the modules, components can listen to the changes via Redux Connect and pick up the exports here.
-
-### store.js
-
-This file should contain a Redux store of all the reducers. This file is where you can add middleware such as Redux Thunk.
-
-### app.js
-
-Initialize your application in this file.
-
-### router.js
-
-Create routes in this file. Use Reacts router to create links that use routes. It is best practice to use routes for displaying pages of content so that people can link to them and the browser history (back button) works for them.
-
 # Tests
 
 For testing components I used enzyme. It allows you to test React components without fully rendering them using a `shallow` method. This way you can test components without including the dependencies you would need if you were to render them in the DOM. 
