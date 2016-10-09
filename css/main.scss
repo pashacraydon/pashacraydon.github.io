@@ -55,6 +55,7 @@ $lightest-white:   rgba(255, 255, 255, 0.35);
 body {
   line-height: 1.5em;
   color: $light-black;
+  letter-spacing: -.003em;
 }
 
 .header-hero {
@@ -114,13 +115,18 @@ h2 {
 }
 
 .post-content h3 {
-  font-style:italic;
-  font-size: 24px;
+  font-size: 21px;
   font-weight: bold;
-  color: $grey;
+  margin-top: 1.5em;
+  color: $black;
 }
 
 p {
+  margin: 1.5em 0 1.5em;
+}
+
+ul li {
+  line-height: 1.5em;
   margin: 1em 0 1em;
 }
 
@@ -176,7 +182,7 @@ code {
     li {
       list-style-type: none;
       display: inline-block;
-      margin-left: 0.5em;
+      margin: 0 0 0 0.5em;
     }
   }
 
@@ -191,37 +197,9 @@ code {
   }
 }
 
-.homepage {
+.colorbg {
   background-color: #7802f7;
-  color: $light-white;
-  .site-header .site-lead {
-    color: $white;
-  }
-  a, a:visited {
-    color: $light-white;
-  }
-  h2 a {
-    color: $white;
-    &:hover {
-      color: $light-white;
-    }
-  }
-  footer ul li {
-    color: $light-white;
-  }
-  .post-meta {
-    color: $lightest-white;
-  }
-  .post-list li {
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  }
-  footer {
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-  }
-}
-
-.about-page {
-  background-color: #f7be02;
+  background-color: #333;
   color: $light-white;
   .site-header .site-lead {
     color: $white;
@@ -245,12 +223,14 @@ code {
     color: $lightest-white;
   }
   .post-list li {
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
   }
   footer {
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
   }
+}
 
+.about-page {
   .photo {
     max-width: 300px;
     float: right;
@@ -259,29 +239,6 @@ code {
     }
   }
 
-  .about-photo {
-    position: fixed;
-    top: 0;
-    right: 0;
-    margin: 0;
-    bottom: 0;
-    left: auto;
-    text-align: center;
-    width: auto;
-    height: auto;
-    min-height: 600px;
-    z-index: -1;
-    img {
-      height: 100%;
-      width: auto;
-      position: relative;
-      left: 100%;
-      margin-left: -200%;
-    }
-    p {
-      margin: 0;
-    }
-  }
   footer {
     display: none;
   }
@@ -367,7 +324,6 @@ footer {
 @include media-query(800px) {
   .post-title {
     font-size: 2.8em;
-    color: $black !important;
     background: transparent none no-repeat scroll 0 0 !important;
   }
   .site-header,
@@ -387,9 +343,6 @@ footer {
     display: none;
   }
 
-  .site-lead {
-    color: $black !important;
-  }
 }
 
 

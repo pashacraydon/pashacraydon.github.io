@@ -13,15 +13,20 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: JSMonk
-email: your-email@domain.com
+title: Pasha Craydon
+email: pashacraydon@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
-  JSMonk is Pasha Craydon. I am a web developer in northern California.
+  Pasha Craydon is a software developer in northern California.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://example.com" # the base hostname & protocol for your site
 twitter_username: jekyllrb
 github_username:  jekyll
 
+gems: [jekyll-paginate]
+paginate: 5
+paginate_path: "page:num"
+
 # Build settings
 markdown: kramdown
 theme: minima
+

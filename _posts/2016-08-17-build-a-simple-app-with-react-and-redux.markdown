@@ -1,14 +1,10 @@
 ---
 layout: post
-title:  "Building an app with React and Redux"
+title:  "Building a simple app with React and Redux"
 date:   2016-08-15 13:15:34 -0700
 categories: jekyll update
 ---
-I built a simple React + Redux app as a demonstration to help my company transition from using Marionette + Backbone to React + Redux. In this post I will go over how it's built and what to be aware of if you are coming from a Backbone or jQuery mindset.
-
-# React Books
-
-React Books is my app. It simply fetches metadata from the Google Books API which you do searches against. It is on Github here [Github](https://github.com/pashasc/react_books) and it can be demo'd here [Demo](https://pashasc.github.io/react_books/).
+I built a simple React + Redux app as a demonstration to help my company transition from using Marionette + Backbone to React + Redux. It simply fetches metadata from the Google Books API and lets you search it. It is on Github here [Github](https://github.com/pashasc/react_books) and it can be demo'd here [Demo](https://pashasc.github.io/react_books/).
 
 ![React Books](/css/images/react_books.png)
 

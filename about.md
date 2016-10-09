@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Pasha Craydon is a software developer in northern California.
+title: About
 permalink: /about/
 ---
 
