@@ -79,19 +79,51 @@ So the above familiar bit of jQuery might look like this in React.
   }
 {% endhighlight %}
 
-Quick note: I use ES6 in this app and compile it with webpack. If you are unfamiliar with ES6 I recommend this [resource](https://github.com/lukehoban/es6features).
-
 The above React component returns ```jsx```. This is a javaScript syntax that can contain html and also React components. I recommend this [resource](https://facebook.github.io/react/docs/jsx-in-depth.html) for more information on ```jsx```.
 
-### Props vrs state
+# Props vrs state
 
-State can be passed down to child components by passing them as arguments. This kind of state is known as 'props'. From the perspective of child components, ```props``` are immutable. If they need to be changed, they should be changed from the original source which can be a parent component or a reducer.
+React divides data between `state` and `props`. Props are immutable data that get passed from parent through child components. `state` is mutable and handled within components where it can only be modified there. 
+
+Data in the above dropdown example is `state` because it is mutable and is local to the component.
+
+The difference between `state` and `props` becomes more obvious when you want to display a list of components. 
+If `props` was passed into a list of components, a single change to `props` will effect every component. 
 
 *Example passing ```books``` props into the ```Pagination``` component.*
 
 {% highlight javascript %}
     <Pagination books={books} />
 {% endhighlight %}
+
+*Example of a single book component rendering book props data*
+
+{% highlight javascript %}
+  render () {
+    const { volumeInfo } = this.props.book;
+
+    return (
+      <li className="book-item">
+        <a href="#"
+          onClick={this.showDetail}
+        >
+          <div className="wrap-book">
+            {volumeInfo.imageLinks &&
+            <img key={volumeInfo.imageLinks.thumbnail}
+              src={volumeInfo.imageLinks.thumbnail} />}
+          </div>
+        </a>
+      </li>
+    )
+  }
+{% endhighlight %}
+
+Meanwhile, you may want to just make a change to a single component out of that list, in that case you'll need to change the `state` for that one component.
+
+
+### Pass callbacks into child components 
+
+A logical next question is how do I make a change to a child component based on the behavior of it's parent?
 
 Parent components can handle changes from child components by passing them callbacks.
 
@@ -103,13 +135,12 @@ Parent components can handle changes from child components by passing them callb
 
 A good pattern to create very reusable components is to have several ```stateless``` child components that are handled by very ```stateful``` parent components. The stateless components simply handle rendering while the stateful components take care of interaction logic. 
 
-State that is not ```props``` is handled in the top level component and is not passed down anywhere. This kind of state is mutable and is useful for such things as re-rendering your component to show or hide things, respond to ```onClick``` events etc.
 
 # Routing
 
 Routes handle url changes in a react app. It is best to always handle change to pages of content through the router. It will reduce logic in your app because you can grab parameters in the url from the router to reason about what content to display. It is also best practice to maintain a browser history and not break the browsers back button (which is a bad thing to do). 
 
-This app uses 'react-router' available through npm. There is only two routes to keep things very simple. 
+This app uses `react-router` available through npm. There are only two routes to keep things very simple. 
 
 {% highlight javascript %}
   <Router history={browserHistory}>
@@ -119,7 +150,7 @@ This app uses 'react-router' available through npm. There is only two routes to 
   </Router>
 {% endhighlight %}
 
-The route maps the url path ```/``` to the ```AppContainer``` component. Browsing to the index page will invoke the ```AppContainer``` component and pass in a few router props like ```route``` and ```routeParams```.
+The route maps the url path ```/``` to the ```AppContainer``` component. Browsing to the index page will invoke the ```AppContainer``` component and pass in a few router props like ```route``` and ```routeParams``` which will contain url segments.
 
 {% highlight javascript %}
   <Route path="page/:page/:query/:index" component={AppContainer} />
@@ -129,7 +160,7 @@ The above nested route also goes to ```AppContainer```. This route requires a ur
 
 # Components
 
-Components in this app are divided between ```container``` components and the rest of them. Container components are *smart*, they listen to the Redux store via *connect* and handle a lot of state which they pass down as props to their child components. They are also often directly hooked up to routes, as the AppContainer is in this case.
+Components in this app are divided between ```container``` components and the rest of them. Container components are *smart*, they listen to the Redux store via *redux connect* and handle a lot of state which they pass down as `props` to their child components. They are also often directly hooked up to routes, as the AppContainer is in this case.
 
 The rest of the components try to be as *dumb* as possible, that is they should ideally not handle any state. This way they will be more reusable.
 
@@ -141,7 +172,7 @@ Components have functions that React will call at specific times during it's [li
 
 If you want to update a component on renders after the initial one happens, ```componentWillReceiveProps()``` is a good one to use. It is not invoked the first time before a page render when ```componentWillMount()``` is invoked, but everytime after when the component receives new *props* this method is called right before rendering. It also receives the new props as it's argument, so it is good to use to compare new props with the old props.
 
-### Dispatching events
+# Actions
 
 In a Redux app, the best way to change state is through dispatching an action. Let's look at the first action we dispatch in the ```AppContainer```. 
 
@@ -159,21 +190,9 @@ In a Redux app, the best way to change state is through dispatching an action. L
   }
 {% endhighlight %}
 
-After visiting the index page in our app, the route maps the index url to the AppContainer. The lifecycle method ```componentWillMount()``` is invoked right before AppContainer is rendered. 
+The `store` in redux holds application state. It allows you to dispatch actions using `dispatch(action)`, access state using `getState()`, subscribe to changes using `subscribe(listener)`.
 
-```searchInfo``` is the data needed to make an API request against Google books. Since the url didn't container an index or query because we visited the '/' page, ```searchInfo``` uses some defaults from the ```constants.js``` module. It will look like this;
-
-{% highlight javascript %}
-    let searchInfo = {
-      'query': '*',
-      'index': 1,
-      'maxResults': 20
-    };
-{% endhighlight %}
-
-This is enough information to make a network request against Google books to ask for books that match the wildcard search '*', starting with the first results (you can ask to start with the 20th result for instance, which is useful for paginating results) and to please return a maximum of 20 results.
-
-```store.dispatch(getBooks(searchInfo));``` dispatches an action to getBooks. This is an API action in the ```src/modules/books/api.js``` file.
+```store.dispatch(getBooks(searchInfo));``` dispatches an action to getBooks. This is an API action in the ```src/modules/books/api.js``` file. 
 
 {% highlight javascript %}
   export function getBooks(searchInfo) {
@@ -187,7 +206,68 @@ This is enough information to make a network request against Google books to ask
   }
 {% endhighlight %}
 
-I will go into this more deeply further down in this article when I talk about modules. Basically though it makes an ajax request to the Google books API and dispatches an action when that request is successful to store the response. This response will be stored as ```booksState``` props. A javaScript object that will contain all of the books metadata returned from the Google Books API.
+This action makes an ajax request to the Google books API. If the request is successful and resolves, a new action `dispatch(getBooksSuccess(response, searchInfo)` is emitted. 
+
+*The `getBooksSuccess` action from the `src/modules/books/actions.js` file*
+
+{% highlight javascript %}
+  export function getBooksSuccess(response, searchInfo) {
+    return {
+      type: types.GET_BOOKS_SUCCESS,
+      books: response.data,
+      searchInfo: searchInfo
+    };
+  }
+{% endhighlight %}
+
+This action passes the response data from the Google Books API request to a reducer where it can be stored in our application state.
+
+*The reducer from the `src/modules/books/reducer.js` file*
+
+{% highlight javascript %}
+  import * as types from './actionTypes';
+  import React from 'react';
+
+  const initialState = {
+    books: {
+      'items': []
+    }
+  };
+
+  export default (state = initialState, action) => {
+
+    switch(action.type) {
+
+      case types.GET_BOOKS_REQUEST:
+        return Object.assign({}, state, { 
+          isFetching: true,
+          didInvalidate: false
+        });
+
+      case types.GET_BOOKS_SUCCESS:
+        return Object.assign({}, state, {
+          isFetching: false,
+          didInvalidate: false,
+          books: {
+            items: action.books.items,
+            totalItems: action.books.totalItems,
+            info: action.searchInfo
+          }
+        });
+    }
+
+    return state;
+
+  }
+{% endhighlight %}
+
+The switch case `types.GET_BOOKS_SUCCESS` picks up the `getBooksSuccess` action and stores some data. This includes a value `isFetching`. This value is `true` in the above switch case for the `GET_BOOKS_REQUEST` action. This is a useful boolean flag for showing a spinner of some sort in your UI while network requests take place. 
+
+Another value, `didInvalidate` is useful for telling our application state it is holding outdated data and needs to fetch new data.
+
+We also of course store the books response in the `books` object.
+
+### Updating the UI after storing data
 
 ```AppContainer``` can listen for any updates to this data and automatically respond with appropriate React lifecycle methods. This is done via Redux Connect. ```AppContainer``` looks like this hooked up to Redux Connect.
 
@@ -230,7 +310,9 @@ I will go into this more deeply further down in this article when I talk about m
 
 There is more going on in the actual component but this is all you would need to hook up to the Redux store. The beauty of this is now all you need to do is dispatch actions that change the data stored in Redux and AppContainer will automatically receive and respond to the new data. 
 
-The ```booksState``` object comes from the Redux reducers in the ```store.js``` file. 
+### Origin of ```booksState```
+
+It is not immediately obvious where `booksState` comes into `AppContainer` through the reducer. The ```booksState``` object comes from the Redux reducers in the ```store.js``` file. 
 
 {% highlight javascript %}
   import { createStore, applyMiddleware } from 'redux';
@@ -266,164 +348,168 @@ Taking a look at the ```reducers.js``` file,
   export default reducers;
 {% endhighlight %}
 
-You can see that the books reducer is responsible for the ```booksState```. This brings us to modules.
-
+You can see that the books reducer is responsible for the ```booksState```.
 
 # Modules
 
-Modules are purely an organizational term I use and are not an actual "React-thing". It is way of nicely organizing the 'data structures' part of your application in a way that can scale nicely. They are self-contained units should expose public functions via index.js in their appropriate folders for other parts of the application to use. 
+I broke up the organization of this app into "modules", the parts of the application which deal with state. They are self-contained units which should expose public functions in index.js for other parts of the application.
 
-They will typically contain these files.
+A module will usually contain these files.
 
-*1. actionsTypes.js*
+### actionTypes.js and actions.js
 
-Action types are different kinds of actions. In the books module, there is two. 
+The only way to mutate state in a react app is to emit an action. An action is a plain javaScript object which describes what happened. ActionTypes are kinds of actions.
 
-{% highlight javascript %}
-  export const GET_BOOKS_REQUEST = 'GET_BOOKS_REQUEST';
-  export const GET_BOOKS_SUCCESS = 'GET_BOOKS_SUCCESS';
-{% endhighlight %}
+### reducer.js
 
-One action type for just making a network request to get books. We will use this to update the ```booksState``` to include an ```isFetching``` value so we can show a loading spinner while the request takes place.
+Reducers maintain a state tree in redux. Reducers are pure functions which do not mutate / change state but rather create a copy of a new state.
 
-The other action type will happen when the request is successfully resolved. When this action happens, we will know that we have gotten data back from our network request to the Google Books API and we can safely store the response.
-
-*2. actions.js*
-
-Actions are functions that you can directly dispatch from components or elsewhere. They will take some data as arguments and return them along with an appropriate actionType to the reducer. The reducer will know which action occured from the actionType. 
-
-*3. reducer.js*
-
-The reducer maintains a state tree in redux. The reducer should use pure functions which never directly mutate state but rather create a copy of a new state. 
-
-Lets look at the reducer in the books module.
-
-{% highlight javascript %}
-  import * as types from './actionTypes';
-  import React from 'react';
-
-  const initialState = {
-    books: {
-      'items': []
-    }
-  };
-
-  export default (state = initialState, action) => {
-
-    switch(action.type) {
-
-      case types.GET_BOOKS_REQUEST:
-        return Object.assign({}, state, { 
-          isFetching: true,
-          didInvalidate: false
-        });
-
-      case types.GET_BOOKS_SUCCESS:
-        return Object.assign({}, state, {
-          isFetching: false,
-          didInvalidate: false,
-          books: {
-            items: action.books.items,
-            totalItems: action.books.totalItems,
-            info: action.searchInfo
-          }
-        });
-    }
-
-    return state;
-  }
-{% endhighlight %}
-
-Dispatching actions will send the data we pass as arguments to the reducer. For example, in the books module actions.js file there are two different actions.
-
-{% highlight javascript %}
-  import * as types from './actionTypes';
-
-  export function getBooksRequest() {
-    return {
-      type: types.GET_BOOKS_REQUEST
-    };
-  }
-
-  export function getBooksSuccess(response, searchInfo) {
-    return {
-      type: types.GET_BOOKS_SUCCESS,
-      books: response.data,
-      searchInfo: searchInfo
-    };
-  }
-{% endhighlight %}
-
-Looking at the above reducer, we can see that dispatching ```getBooksRequest()``` via ```store.dispatch(getBooksRequest())``` will update ```booksState``` to include two new values. 
-
-```isFetching: true``` so we can tell that the request is happening. 
-```didInvalidate: false``` so we can say that the data is fresh. But we could use it to dispatch an action to say that the data should be fetched again or to erase the data.
-
-*4. api.js*
+### api.js
 
 Functions that facilitate network requests should go in the API file. These functions use Redux Thunk Async Actions to perform requests, dispatch the state of the request then store the response.
 
-You can dispatch an action to facilitate these. For example in ```AppContainer``` earlier we dispatched,
+### index.js
 
-{% highlight javascript %}
-  let searchInfo = {
-    'query': '*',
-    'index': 1,
-    'maxResults': 20
-  };
+Modules should expose functions via this file. You should not directly import functions in modules from other parts of the application to use. This is best practice to avoid recursive imports and keep code decoupled.
 
-  store.dispatch(getBooks(searchInfo));
-{% endhighlight %}
-
-```getBooks()``` is an API action.
-
-{% highlight javascript %}
-  export function getBooks(searchInfo) {
-    const { query, maxResults, index } = searchInfo;
-    return function (dispatch) {
-      dispatch(getBooksRequest());
-      return axios.get(`${c.GOOGLE_BOOKS_ENDPOINT}?q=${encodeURIComponent(query)}&startIndex=${index}&maxResults=${maxResults}&projection=full&fields=totalItems,items(id,volumeInfo)`)
-        .then(response => dispatch(getBooksSuccess(response, searchInfo))
-      );
-    }
-  }
-{% endhighlight %}
-
-This function emits two actions. The first action ```dispatch(getBooksRequest());``` will update the books state isFetching to be true so the UI can show a spinner while the request is handled. The second action, ```dispatch(getBooksSuccess(response, searchInfo))``` happens when the request is resolved. It sends the response to the Redux store for storing the books information in the reducer.
-
-*5. index.js*
-
-Modules should expose functions via this file. 
-
-*How the books module index.js exports all of it's files*
-
-{% highlight javascript %}
-  import * as actions from './actions';
-  import * as api from './api';
-  import * as types from './actionTypes';
-  import reducer, { initialState } from './reducer';
-
-  export default { actions, api, reducer, types }
-{% endhighlight %}
-
-You should not directly import functions in modules from other parts of the application to use. This is best practice to avoid recursive imports and keep code decoupled.
-
-For example, this is bad practice;
+For example, this is wrong;
 
 {% highlight javascript %}
   import getBooks from 'modules/books/api';
 {% endhighlight %}
 
-This is good practice;
+This is right;
 
 {% highlight javascript %}
   import * as books from 'modules/books';
   const { getBooks } = books.api;
 {% endhighlight %}
 
-It is best to create functions in modules that do manipulations and expose them via index.js rathern then have other parts of the app directly import stuff from them to do their own manipulations.
+If another part of the application needs to dip into a module to manipulate some things, the module should instead expose a function via index.js that does the manipulations that other parts of the app can run instead.
 
+### reducers.js
 
+This file combines all of the reducers from each module for the Redux Connect store. When state changes happen in the modules, components can listen to the changes via Redux Connect and pick up the exports here.
+
+### store.js
+
+This file should contain a Redux store of all the reducers. This file is where you can add middleware such as Redux Thunk.
+
+### app.js
+
+Initialize your application in this file.
+
+### router.js
+
+Create routes in this file. Use Reacts router to create links that use routes. It is best practice to use routes for displaying pages of content so that people can link to them and the browser history (back button) works for them.
+
+# Tests
+
+For testing components I used enzyme. It allows you to test React components without fully rendering them using a `shallow` method. This way you can test components without including the dependencies you would need if you were to render them in the DOM. 
+
+*Testing a component using enzymes `shallow` method, from the `tests/components/Book.tests.js` file*
+
+{% highlight javascript %}
+  import expect from 'expect';
+  import React from 'react';
+  import axios from 'axios';
+  import MockAdapter from 'axios-mock-adapter';
+  import store from 'store';
+  import * as c from 'constants';
+  import booksJSON from 'fixtures/books.json';
+  import Book from 'components/Book';
+
+  const { shallow, mount } = enzyme;
+  const singleBook = booksJSON.items[0];
+
+  function setup(properties = {}) {
+    const props = Object.assign({
+      book: singleBook
+    }, properties);
+
+    const enzymeWrapper = shallow(
+      <Book {...props} />
+    )
+
+    return {
+      props,
+      enzymeWrapper
+    }
+  }
+
+  describe('<Book />', () => {
+    it('should render self and subcomponents', () => {
+      const { enzymeWrapper } = setup();
+      expect(enzymeWrapper.find('.book-item').length).toExist();
+    });
+
+    it('clicking book should make request to get book details.', () => {
+      const { enzymeWrapper } = setup();
+
+      const mock = new MockAdapter(axios);
+      mock.onPost(`${c.GOOGLE_BOOKS_ENDPOINT}/${singleBook.id}`)
+        .reply(200, { response: { data: singleBook }
+      });
+
+      enzymeWrapper.find('a').simulate('click', { preventDefault() {} });
+
+      expect(store.getState().bookDetailState.isFetching).toExist();
+      mock.reset();
+    });
+
+  });
+{% endhighlight %}
+
+You can also use `mount` to render components. This is often necessary for simulating click events which occur in the DOM.
+
+*Testing a component using enzymes `mount` method, from the `tests/components/BookDetail.tests.js` file*
+
+{% highlight javascript %}
+  import expect from 'expect';
+  import React from 'react';
+  import store from 'store';
+  import booksJSON from 'fixtures/books.json';
+  import BookDetail from 'components/BookDetail';
+
+  const { mount } = enzyme;
+  const singleBook = booksJSON.items[0].volumeInfo;
+
+  function setup(properties = {}) {
+    const props = Object.assign({
+      book: singleBook
+    }, properties);
+
+    const enzymeWrapper = mount(
+      <BookDetail {...props} />
+    )
+
+    return {
+      props,
+      enzymeWrapper
+    }
+  }
+
+  describe('<BookDetail />', () => {
+    it('should render self and subcomponents', () => {
+      const { enzymeWrapper } = setup();
+      expect(enzymeWrapper.find('.detail-view').length).toExist();
+    });
+
+    it('clicking close detail link should empty the book details state.', () => {
+      const { enzymeWrapper } = setup();
+      enzymeWrapper.find('a').simulate('click');
+      expect(Object.keys(store.getState().bookDetailState.book).length).toNotExist();
+    });
+  });
+{% endhighlight %}
+
+# Wrapping up
+
+I covered a lot of material very quickly in this blog post. I highly recommend these sources for digging further into the details.
+
+* [Official Redux docs](http://redux.js.org/){:target="_blank"}
+* [Thinking in React](https://facebook.github.io/react/docs/thinking-in-react.html){:target="_blank"}
+* [Enzyme Documentation](https://github.com/airbnb/enzyme/){:target="_blank"}
 
 <!--
 {::options parse_block_html="true" /}

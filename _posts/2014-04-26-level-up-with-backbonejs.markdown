@@ -174,7 +174,7 @@ Backbone.Views should handle the layer of logic between your models and the UI. 
   var Dog = Backbone.View.extend({
    el: "#dog-bone",
 
-   template: _.template(“A template”),
+   template: _.template("A template"),
 
    events: {
      "click .my-button": "onClickHandler"
@@ -223,7 +223,7 @@ We can now update our UI simply changing some attributes on our cat1 model:
 
 You can actually use other javaScript templating frameworks, Backbone requires Underscore as a dependency so we use it here. Pretty much it just contains the html you want and the model attributes as javaScript variables.
 
-{% highlight javascript %}
+{% highlight html %}
   <script type="text/template" id="my-template"> 
    <h1> This dog / cat hybrid thing is <%= color => color.</h1>
    <h2> It is age <%= age %> </h1>

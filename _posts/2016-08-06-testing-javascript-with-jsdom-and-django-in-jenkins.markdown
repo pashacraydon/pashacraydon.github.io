@@ -43,13 +43,13 @@ I created a file called ```browser.js``` that sets up jsdom and stubs out a few 
 
 You can run single test suites this way by just requiring this file when you run the mocha command, for example;
 
-{% highlight javascript %}
+{% highlight bash %}
   mocha static/test/build/testUpdateBillingInfo.js --require 'static/test/mocha/browser.js'
 {% endhighlight %}
 
 You can create another file to run all of the tests at once. This file will just import all of your mocha test modules. For example, I created a file called ```run.js```. At the top of this file I imported the ```browser.js``` file which any mocha module is dependent on in this setup. Then I simply run the file in mocha.
 
-{% highlight javascript %}
+{% highlight bash %}
   mocha static/test/mocha/run.js
 {% endhighlight %}
 
