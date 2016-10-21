@@ -1,8 +1,0 @@
----
-layout: post
-title:  "ES6 Tricks"
-date:   2016-09-15 13:15:34 -0700
-categories: jekyll update
----
-
-ES6 has included some nice changes to javaScript syntax which make writing it much easier. 

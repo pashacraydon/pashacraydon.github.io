@@ -130,6 +130,7 @@ h2 {
   font-family: 'Lato', sans-serif;
   margin: 0.5em 0 1em;
   color: $black;
+  font-weight: 900;
 }
 
 .post-content h3 {
@@ -141,11 +142,13 @@ h2 {
 
 p {
   margin: 1.5em 0 1.5em;
+  font-weight: 100;
 }
 
 ul li {
   line-height: 1.5em;
   margin: 1em 0 1em;
+  font-weight: 100;
 }
 
 pre,
@@ -225,7 +228,7 @@ img {
     text-decoration: none;
     position: relative;
     top: 5px;
-    letter-spacing: -1px;
+    font-weight: 900;
   }
 }
 
@@ -287,7 +290,7 @@ img {
 .page-content {
   margin: 0 auto;
   width: 60%;
-  max-width: 1000px;
+  max-width: 920px;
 }
 
 .page-content {
