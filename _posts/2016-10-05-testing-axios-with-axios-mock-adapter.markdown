@@ -10,10 +10,10 @@ I've been using [axios](https://www.npmjs.com/package/axios) to make networks to
 {% highlight javascript %}
   export function retrieveSingleCollection(collectionId) {
     return function (dispatch) {
-      dispatch(retrieveCollectionRequest());
+      dispatch(retrieveCollectionRequest())
       return axios.get(`${c.WEBSERVICE_ENDPOINT}/collections/${collectionId}/`)
         .then(response => dispatch(retrieveSingleCollectionSuccess(response)))
-        .catch(error => dispatch(collectionsRequestDidError(error)));
+        .catch(error => dispatch(collectionsRequestDidError(error)))
     }
   }
 {% endhighlight %}
@@ -25,20 +25,20 @@ The next action, `retrieveSingleCollectionSuccess(response))` happens after the 
 I dispatch the action elsewhere in one of my components.
 
 {% highlight javascript %}
-  store.dispatch(retrieveSingleCollection(collectionId));
+  store.dispatch(retrieveSingleCollection(collectionId))
 {% endhighlight %}
 
 I want to test that when I dispatch this action it makes a network request to my webservice then stores the response in my Redux store if it is successful.
 
 {% highlight javascript %}
-  import axios from 'axios';
-  import MockAdapter from 'axios-mock-adapter';
-  import expect from 'expect';
-  import * as c from 'collections/utils/constants';
-  import collectionsJSON from 'collections/tests/collections.json';
+  import axios from 'axios'
+  import MockAdapter from 'axios-mock-adapter'
+  import expect from 'expect'
+  import * as c from 'collections/utils/constants'
+  import collectionsJSON from 'collections/tests/collections.json'
 
-  const collections = collectionsJSON;
-  const collection = collections[0];
+  const collections = collectionsJSON
+  const collection = collections[0]
 
   describe('retrieveSingleCollection()', () => {
     it('should store the response from a successful GET request.', function () {
@@ -67,8 +67,8 @@ I also wanted to see what my request was doing when the mock adapter handles it.
 
 {% highlight javascript %}
   mock.onGet(`${c.WEBSERVICE_ENDPOINT}/collections/${collectionId}/`).reply(function(config) {
-    console.log(JSON.stringify(config, null, 2));
-    return [200];
+    console.log(JSON.stringify(config, null, 2))
+    return [200]
   });
 {% endhighlight %}
 
