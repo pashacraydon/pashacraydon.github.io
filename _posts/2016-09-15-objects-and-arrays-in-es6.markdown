@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Obejcts and Arrays in ES6"
+title:  "Objects and Arrays in ES6"
 date:   2016-09-15 13:15:34 -0700
 categories: jekyll update
 ---
