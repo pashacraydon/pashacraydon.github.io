@@ -11,7 +11,7 @@ ES6 has some new tools for dealing with objects and arrays. These include destru
 
 ### Object destructuring
 
-Destructuring allows us to pull in specific attributes from an object and scope it locally. Consider the following cat object (also known as an *object literal*).
+Object destructuring allows us to pull in specific attributes from an object and scope it locally. Consider the following cat object (also known as an *object literal*).
 
 {% highlight javascript %}
   var cat = {
@@ -35,7 +35,7 @@ We can pull out attributes and create local variables out of them. These variabl
   console.log(cat.gender) // "female"
 {% endhighlight %}
 
-Just as object literals allows us to create multiple properties at once, we can destructure them, by extracting multiple properties at once. This is considered an *object pattern*.
+Just as object literals allow us to create multiple properties at once, we can destructure them, by extracting multiple properties at once. This is considered an *object pattern*.
 
 {% highlight js %}
   const { color: c, gender: g, age: a } = cat
@@ -89,7 +89,7 @@ You can pass over values in arrays using commas to get to specific indexes.
   console.log(firstAnimal) // "lion"
 {% endhighlight %}
 
-You can get all the remaining elements of an array using the rest operator. This operator looks like the spread operator in ES6 (...) except it is used inside function calls and Arrays.
+You can get all the remaining elements of an array using the rest operator. This operator looks like the spread operator in ES6 (...) except it is used inside function calls and arrays.
 
 {% highlight javascript %}
   const [firstAnimal,, ...remaining] = ["cat", "dog", "lion", "horse"]
@@ -176,7 +176,7 @@ This is the same as writing the following in ES5.
   };
 {% endhighlight %}
 
-This could be quite handy in functions or modules which export objects.
+This could be quite handy in functions or modules that export objects.
 
 {% highlight javascript %}
   var cat = (age, gender) => age({age, gender})
