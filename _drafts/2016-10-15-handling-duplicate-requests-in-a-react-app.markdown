@@ -5,10 +5,15 @@ date:   2016-10-15 13:15:34 -0700
 categories: jekyll update
 ---
 
-I ran into a messy situation today where I needed my React app which makes network requests for data to play well with another external app. 
+I have been working on a React app that needs to be embedded on many other parts of a site. It makes network requests to display a bunch of data. 
 
-The external app uses a slider that makes it's own network requests everytime it creates new slides. When those slides are created, it needs my React app to make it's own network requests to display some UI in each of it's slides. 
+I ran into a sticky situation where I embedded it in a part of the site that makes it's own network requests to display some slides. The React app needed to display it's own data in each slide. 
 
-Problem was that my React app was making many extra network requests it did not need to make. I also needed this external app to know nothing about my React app, that is I wanted my React app to be dummy proof, anyone should be able to initialize it anywhere and even multiple times on the same page without my React app doing any duplicate requests.
+The problem was that the React app was being initialized multiple times and making more network requests then it needed to. This couldn't really be avoided and I didn't want other parts of the site to "know about" the React app. It needed to be dummy proof, any other engineer could embed it anywhere and it would only make the network requests it needed to bootstrap itself.
+
+### Solution
+
+
+
 
 
