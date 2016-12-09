@@ -5,7 +5,7 @@ date:   2016-10-20 13:15:34 -0700
 categories: jekyll update
 ---
 
-I setup webpack at my company so I am often asked how to debug issues other devs have installing npm packages. My debug strategy is pretty straightforward;
+I setup webpack at my company so I am often asked to debug issues other devs have with npm packages. My debug strategy is pretty straightforward;
 
 * Ask for a stacktrace of the error
 * Follow it from the bottom to the top
