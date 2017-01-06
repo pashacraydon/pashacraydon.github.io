@@ -24,7 +24,7 @@ Object destructuring allows us to pull in specific attributes from an object and
 We can pull out attributes and create local variables out of them. These variables can be changed without changing the original `cat` object.
 
 {% highlight javascript %}
-  var { color, gender } = sandwich
+  var { color, gender } = cat
   color = "black"
   gender = "male"
 
