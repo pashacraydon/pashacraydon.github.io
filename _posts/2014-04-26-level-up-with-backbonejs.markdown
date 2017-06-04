@@ -2,7 +2,7 @@
 layout: post
 title:  "Leveling up with backbone.js"
 date:   2014-04-15 13:15:34 -0700
-categories: jekyll update
+category: article
 ---
 
 

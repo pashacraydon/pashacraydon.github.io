@@ -23,7 +23,7 @@ twitter_username: jekyllrb
 github_username:  jekyll
 
 gems: [jekyll-paginate]
-paginate: 5
+paginate: 20
 paginate_path: "page:num"
 
 highlighter: rouge

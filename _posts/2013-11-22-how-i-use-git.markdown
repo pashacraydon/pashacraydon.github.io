@@ -2,7 +2,7 @@
 layout: post
 title:  "How I use git"
 date:   2013-11-22 13:15:34 -0700
-categories: jekyll update
+category: article
 ---
 
 When it comes to git I keep it simple. I use the basic commands which I feel are enough without getting into trouble and the helpful comments in the terminal are usually enough for me figure out what to do right.

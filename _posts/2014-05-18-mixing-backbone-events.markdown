@@ -2,7 +2,7 @@
 layout: post
 title:  "Mixing Backbone Events"
 date:   2014-05-18 13:15:34 -0700
-categories: jekyll update
+category: article
 ---
 
 Backbone allows you to mix your own custom events to bind and trigger. 

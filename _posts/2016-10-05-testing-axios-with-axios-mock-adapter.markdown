@@ -2,7 +2,7 @@
 layout: post
 title:  "Testing axios with axios-mock-adapter"
 date:   2016-10-05 13:15:34 -0700
-categories: jekyll update
+category: article
 ---
 
 I have been using [axios](https://www.npmjs.com/package/axios) to make network requests to a webservice from a React + Redux app. For testing the requests from the React app, I have been using [axios-mock-adapter](https://www.npmjs.com/package/axios-mock-adapter). The following is the action which makes the network request that I want to test.

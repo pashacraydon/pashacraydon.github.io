@@ -2,7 +2,7 @@
 layout: post
 title:  "Polling an AJAX request in React + Redux"
 date:   2016-10-15 13:15:34 -0700
-categories: jekyll update
+category: article
 ---
 
 Problem; how to mount a React component that requires data from a webservice on many other parts of a page, many times (that also each make their own network requests) without duplicating requests.

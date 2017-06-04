@@ -2,7 +2,7 @@
 layout: post
 title:  "Objects and Arrays in ES6"
 date:   2016-09-15 13:15:34 -0700
-categories: jekyll update
+category: article
 ---
 
 ES6 has some new tools for dealing with objects and arrays. These include destructuring assignment, enhanced object literals and the spread operator. 

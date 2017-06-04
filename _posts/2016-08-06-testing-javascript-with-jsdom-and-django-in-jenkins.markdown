@@ -2,7 +2,7 @@
 layout: post
 title:  "Testing javaScript with jsdom and Django in jenkins"
 date:   2016-08-06 13:15:34 -0700
-categories: jekyll update
+category: article
 ---
 
 Jsdom is an implementation of the DOM in javaScript. Here is how to set it up using python and Django for generating html fixtures, mocha for javaScript testing and sinonjs for stubs and mocks.

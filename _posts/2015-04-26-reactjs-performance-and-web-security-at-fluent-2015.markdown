@@ -2,7 +2,7 @@
 layout: post
 title:  "React.js, performance and web security at Fluent 2015"
 date:   2015-04-26 13:15:34 -0700
-categories: jekyll update
+category: article
 ---
 
 [Fluent 2015](http://conferences.oreilly.com/fluent/javascript-html-2015) was packed with presentations on javaScript, microservices, native script, GIT, design and much more. It was fascinating diving into languages and topics presented by people who are leaders on them. Here are a few things that I took away from it that will effect the way I work.

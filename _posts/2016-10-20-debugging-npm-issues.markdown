@@ -2,7 +2,7 @@
 layout: post
 title:  "Debugging npm issues in webpack"
 date:   2016-10-20 13:15:34 -0700
-categories: jekyll update
+category: article
 ---
 
 I setup webpack at my company so I am often asked to debug issues other devs have with npm packages. My debug strategy is pretty straightforward;
