@@ -9,7 +9,7 @@ Problem; how to mount a React component that requires data from a webservice on 
 
 ### Polling to the rescue
 
-{% highlight javascript %}
+{% highlight js %}
   function displayMenu(collections) {
     ReactDOM.render(
       <MenuDropdown collectionsState={collections} />,
