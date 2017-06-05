@@ -1,0 +1,264 @@
+
+// Minima also includes a mixin for defining media queries.
+// Use media queries like this:
+// @include media-query($on-palm) {
+//     .wrapper {
+//         padding-right: $spacing-unit / 2;
+//         padding-left: $spacing-unit / 2;
+//     }
+// }
+
+
+body {
+  line-height: 1.5em;
+  color: $light-black;
+  letter-spacing: -.003em;
+  font-family: $base-font-family;
+  background-color: $base-background-color;
+  color: $light-white;
+}
+
+.header-hero {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 550px;
+  overflow: hidden;
+  text-align: center;
+  z-index: -1;
+  p {
+    margin: 0;
+  }
+  .inner {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+  }
+}
+
+
+
+img {
+  border: 1px solid #E3EDF3;
+  display: block;
+  margin: 0 auto;
+}
+
+
+.site-header {
+  border: none;
+  min-height: auto;
+  padding: 2em 0 2em;
+}
+
+.about-page {
+  .photo {
+    max-width: 300px;
+    float: right;
+    img {
+      border-radius: 200px;
+    }
+  }
+}
+
+.site-header,
+.page-content {
+  margin: 0 auto;
+  width: 50%;
+  max-width: 920px;
+}
+
+.page-content {
+  font-weight: 400;
+  font-size: 1.3em;
+  line-height: 1.8em;
+
+  h1 {
+    margin: 1.5em 0 0.5em;
+  }
+}
+
+.post-list {
+  li {
+    border-bottom: 1px solid $base-border-color;
+    position: relative;
+    margin-bottom: 20px;
+    padding: 0.2em 0 1em;
+    &:last-child {
+    }
+    &:first-child {
+    }
+  }
+  .category,
+  .post-link {
+    display: inline;
+  }
+  .category {
+    font-family: "lato", arial, sans-serif;
+    background-color: rgba(0, 0, 0, 0.35);
+    color: #FFF;
+    font-size: 12px;
+    padding: 2px 5px 2px;
+    position: relative;
+    top: -2px;
+    left: 5px;
+    border-radius: 2px;
+    text-transform: uppercase;
+    &.news {
+      background-color: #00c3ab;
+    }
+    &.tutorial {
+      background-color: #e0cd02;
+    }
+    &.opinion {
+      background-color: #9164ff;
+    }
+    &.code {
+      background-color: #88B4FF;
+    }
+    &.tip {
+      background-color: #CCC;
+    }
+    &.video {
+      background-color: #15c61e;
+    }
+    &.ebook {
+      background-color: #4286f4;
+    }
+    &.article {
+      background-color: rgba(0,0,0,.4);
+    }
+    a,
+    a:visited {
+      color: #FFF;
+      font-size: 11px;
+    }
+  }
+}
+
+footer {
+  font-size: smaller;
+  padding: 1em 0 0;
+  margin: 3em 0 4em;
+  float: left;
+  width: 100%;
+  font-size: 13px;
+  ul {
+    margin: 0;
+    li {
+      list-style-type: none;
+      display: inline-block;
+      font-size: smaller;
+      margin-right: 10px;
+    }
+  }
+}
+
+
+
+.menu {
+  float: right;
+  margin: -12px 0 0;
+  li {
+    display: inline-block;
+    text-decoration: none;
+    margin-left: 20px;
+    a {
+      font-family: "lato", arial, sans-serif;
+      text-decoration: none;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      padding: 38px 5px 2px;
+    }
+  }
+}
+
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
+@include media-query(1450px) {
+  .site-header,
+  .page-content {
+    margin: 0 auto;
+    width: 60%;
+  }
+}
+
+@include media-query(1000px) {
+  .site-header,
+  .page-content {
+    margin: 0 auto;
+    width: 70%;
+  }
+  .slug .post-title {
+    font-size: 3em;
+  }
+}
+
+
+@include media-query(800px) {
+  .post-title {
+    background: transparent none no-repeat scroll 0 0 !important;
+  }
+  .site-header,
+  .page-content {
+    margin: 0 auto;
+    width: 90%;
+  }
+
+  .post-header {
+    padding: 0 !important;
+    .post-meta {
+      margin: 2em 0 2em !important;
+    }
+  }
+
+  .header-hero {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .homepage .menu a.home,
+  .about-page .menu a.about,
+  .article-page .menu a.articles {
+    background: rgba(0, 0, 0, 0.2);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    color: white;
+  }
+}
+
+@include media-query(601px) {
+  .homepage .menu a.home,
+  .about-page .menu a.about,
+  .article-page .menu a.articles {
+    color: white;
+  }
+
+  .menu {
+    li {
+      display: block;
+      margin: 0.5em 0 0.5em;
+      a,
+      a:visited,
+      a:hover {
+        padding: 0;
+      }
+    }
+  }
+}
+
+
+.fade-in-down {
+    -webkit-animation-name: fadeInDown;
+    animation-name: fadeInDown;
+}

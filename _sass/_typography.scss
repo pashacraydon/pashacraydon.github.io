@@ -1,0 +1,133 @@
+
+
+em {
+  font-size: smaller;
+}
+
+a,
+a:visited,
+a:hover {
+  color: $light-white;
+  border: none;
+  text-decoration: underline;
+}
+
+a:hover,
+a:visited {
+  color: white;
+}
+
+a:visited {
+  opacity: 0.65;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+a.post-link,
+a.post-link:visited {
+  font-size: 1.75em;
+  line-height: 1.2em;
+  text-decoration: none;
+}
+
+a.quick-link,
+a.quick-link:visited {
+  line-height: 1.5em;
+  text-decoration: none;
+  font-size: 28px;
+  font-family: "lato", arial, sans-serif;
+}
+
+.quick-link {
+  p {
+    font-size: 16px;
+  }
+  h2 {
+    margin: 0;
+  }
+}
+
+h1,
+h2 {
+  margin: 0.5em 0 0.5em;
+  color: $white;
+  font-weight: 900;
+}
+
+h2 a {
+  color: $white;
+  &:hover {
+    color: $light-white;
+  }
+}
+
+.post-content h3 {
+  font-size: 21px;
+  font-weight: bold;
+  margin-top: 1.5em;
+}
+
+p {
+  margin: 0 0 1em;
+  font-weight: 100;
+}
+
+ul li {
+  line-height: 1.5em;
+  margin: 1em 0 1em;
+  font-weight: 100;
+}
+
+.post-header {
+  margin: 5em 0 1em;
+}
+
+.post-title {
+  border-bottom: 2px solid $base-border-color;
+  font-size: 1.5em;
+}
+
+.slug .post-title {
+  font-size: 3.75em;
+  line-height: 1.2em;
+  letter-spacing: 0px;
+  margin-bottom: 0.5em;
+  text-decoration: none;
+  display: inline;
+  border-bottom: none;
+}
+
+.post-meta {
+  font-size: 21px;
+  margin: 2em 0 1em;
+}
+
+.post-list {
+  .post-meta {
+    margin: 1em 0 0;
+  }
+}
+
+.site-header .site-lead {
+  color: $white;
+  font-size: 21px;
+  text-decoration: none;
+  position: relative;
+  top: 5px;
+  font-weight: 900;
+}
+
+footer ul li {
+  color: $light-white;
+}
+
+.post-meta {
+  color: $lightest-white;
+}
+
+.post-list li {
+  border-bottom: 1px solid $base-border-color;
+}
+
