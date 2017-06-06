@@ -5,7 +5,7 @@ date:   2017-06-01 13:15:34 -0700
 category: article
 ---
 
-Do you write most of your javaScript in the browser, using `debugger;` and `console.log` statements. If so, you maybe hindering the speed you write javaScript and the quality of your code. 
+Do you write most of your javaScript in the browser, using `debugger;` and `console.log` statements. If so, you may be hindering the speed you write javaScript and the quality of your code. 
 
 ## Tunnel code
 
@@ -29,7 +29,7 @@ Now start writing your code.
 
 As you start writing your code, write tests to make sure it works. While you will write more code then you would if you had just started writing code using the browser, this approach will actually save you more time. 
 
-The reason is that there are a lot of small, inconvenient things that even a genius could be forgiven for missing. That value you require from a function that needs to be a float, well turns out it is a string. The closure that is supposed to return a new value, well turns it just returns the same value over and over. These problems are much easier to discover and fix with tests then in the browser.
+The reason is that there are a lot of small, inconvenient things that even a genius could be forgiven for missing. That value you require from a function that needs to be a float, well turns out it is a string. The closure that is supposed to return a new value, well turns out it just returns the same value over and over. These problems are much easier to discover and fix with tests then in the browser.
 
 I recommend many, short tests over a few, large tests. Nothing is too dumb to test, it is often the obvious, simple things which have bugs.
 
