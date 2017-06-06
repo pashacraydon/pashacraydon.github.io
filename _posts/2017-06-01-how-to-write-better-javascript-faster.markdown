@@ -11,11 +11,13 @@ Do you write most of your javaScript in the browser, using `debugger;` and `cons
 
 When you focus first on only whether or not your code runs, the vision of your code is narrow. It can be easy to look at writing code as just a series of solving problems where each solution is a patchwork of unrelated pieces farmed from jumping from one stackoverflow search to the next.
 
-You may be tempted to believe this is the fastest way to write javaScript. How much time do you lose tracking down bugs you do not entirely understand, just to get the thing working. I bet it is a lot.
+You may be tempted to believe this is the fastest way to write javaScript. 
+
+How much time do you lose tracking down bugs you do not entirely understand, just to get the thing working. I bet it is a lot.
 
 How often do you get frustrated because your code is broken and if you could just figure out why then you could move on to the next problem and also why is the browser taking so long to load. I bet it is a lot.
 
-## Higher vision
+## Greater vision
 
 I challenge you to set your gaze higher. Forget about whether or not your code actually works in the browser, that can come later. In fact, forget about the browser altogether at first.
 
