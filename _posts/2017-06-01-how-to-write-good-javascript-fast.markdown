@@ -1,15 +1,15 @@
 ---
 layout: post
-title:  "How to write better javaScript faster"
+title:  "How to write good javaScript fast"
 date:   2017-06-01 13:15:34 -0700
 category: article
 ---
 
-Do you write most of your javaScript in the browser, using `debugger;` and `console.log` statements. If so, you may be hindering the speed you write javaScript and the quality of your code. 
+Do you write most of your javaScript by making sure it runs first in the browser, adding `debugger` and `console.log` statements along the way. If so, you may be hindering the speed you write javaScript and the quality of your code. 
 
 ## Tunnel code
 
-When you focus first on only whether or not your code runs, the vision of your code is narrow.
+When you focus first on only whether or not your code runs without errors, the vision of your code is narrow.
 
 It can be easy to look at writing code as just a series of solving problems where each solution is a patchwork of unrelated pieces farmed from jumping from one stackoverflow search to the next.
 
@@ -35,19 +35,21 @@ As you start writing your code, write tests to make sure it works. While you wil
 
 The reason is that there are a lot of small, inconvenient things that even a genius could be forgiven for missing. 
 
-That value you require from a function that needs to be a float, well turns out it is a string. 
+That value you require from a function that needs to be a float, well turns out it returns a string. 
 
-The closure that is supposed to return a new value, well turns out it just returns the same value over and over. These problems are much easier to discover and fix with tests then in the browser.
+The closure that is supposed to return a new value, well turns out it just returns the same value over and over. 
 
-I recommend many, short tests over a few, large tests. Nothing is too dumb to test, it is often the obvious, simple things which have bugs.
+These problems are much easier to discover and fix with tests then in the browser.
+
+I recommend many, short tests over a few, large tests. Nothing is too dumb to test. It is often the obvious, simple things which have bugs.
 
 ## Relax
 
-I believe that writing code should be fun. Focusing on the architecture of my code, deeply understanding it, caring about its readability and maintainability. This is fun to me. 
+I believe that writing code should be fun or at least stress free. Focusing on the architecture of my code, deeply understanding it, caring about its readability and maintainability. These are fun things to me. 
 
-Solving a bunch of fires because I am focusing only on what is wrong with my code is stressful and not fun.
+You want to steer away from situations where you are putting out a bunch of fires. This is not always possible but the more you can focus on the fun things rather then only what is wrong with your code, the more stress free you will be.
 
-So relax. Focus on the process and take care of your code. You will write it much quicker and it will be much better, I guarantee it.
+So relax. Focus on the process rather then the end result and take care of your code. You will write it much quicker and it will be much better, I guarantee it.
 
 
 
