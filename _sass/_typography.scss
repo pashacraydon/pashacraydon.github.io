@@ -37,6 +37,7 @@ a.quick-link:visited {
   line-height: 1.5em;
   text-decoration: none;
   font-size: 28px;
+  font-weight: normal;
 }
 
 .quick-link {
@@ -92,16 +93,18 @@ ul li {
 .post-title {
   border-bottom: 2px solid $base-border-color;
   font-size: 1.5em;
+  letter-spacing: 0;
+  font-weight: normal;
 }
 
 .slug .post-title {
   font-size: 3.75em;
   line-height: 1.2em;
-  letter-spacing: 0px;
   margin-bottom: 0.5em;
   text-decoration: none;
   display: inline;
   border-bottom: none;
+  font-weight: bold;
 }
 
 .post-meta {
