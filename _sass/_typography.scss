@@ -40,6 +40,11 @@ a.quick-link:visited {
   font-weight: normal;
 }
 
+.menu li a,
+.category {
+  font-family: 'Merriweather Sans', sans-serif;
+}
+
 .quick-link {
   p {
     font-size: 16px;
@@ -50,10 +55,12 @@ a.quick-link:visited {
 }
 
 h1,
-h2 {
+h2,
+h3 {
   margin: 0.5em 0 0.5em;
   color: $white;
   font-weight: 900;
+  font-family: 'Merriweather Sans', sans-serif;
 }
 
 h2 a {
@@ -93,7 +100,7 @@ ul li {
 .post-title {
   border-bottom: 2px solid $base-border-color;
   font-size: 1.5em;
-  letter-spacing: 0;
+  letter-spacing: -3px;
   font-weight: normal;
 }
 
@@ -110,6 +117,7 @@ ul li {
 .post-meta {
   font-size: 21px;
   margin: 2em 0 1em;
+  font-family: 'Merriweather Sans', sans-serif;
 }
 
 .post-list {
@@ -148,6 +156,7 @@ footer ul li {
 
   .post-pagination {
     border-top: 1px solid $base-border-light-grey;
+    font-family: 'Merriweather Sans', sans-serif;
     ul li.right {
       border-left: 1px solid $base-border-light-grey;
     }
