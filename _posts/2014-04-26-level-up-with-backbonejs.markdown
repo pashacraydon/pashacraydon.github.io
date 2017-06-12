@@ -10,6 +10,8 @@ category: article
 
 At [Safari](http://www.safaribooksonline.com/), we like Backbone.js for designing our front-end interactions, including our reading interface. I’m going to shed light on the concepts that I feel are crucial to working with Backbone, if you’re a beginner to it or similar MVC JS frameworks. If you already know a lot of Backbone, this post probably isn’t for you.
 
+<!-- more -->
+
 ### Models
 
 Models are the heart of a Backbone project. They are a good place to start when beginning a project.

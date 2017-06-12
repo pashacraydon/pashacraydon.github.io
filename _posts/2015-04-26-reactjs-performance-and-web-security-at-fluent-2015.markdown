@@ -7,6 +7,8 @@ category: article
 
 [Fluent 2015](http://conferences.oreilly.com/fluent/javascript-html-2015) was packed with presentations on javaScript, microservices, native script, GIT, design and much more. It was fascinating diving into languages and topics presented by people who are leaders on them. Here are a few things that I took away from it that will effect the way I work.
 
+<!-- more -->
+
 # React.js
 
 React.js is pretty hot right now. I got a nice introduction and high level overview and in the process became more aware of the limitations of backbone.js (the front-end framework we use at Safari). React does away with the “model, view, controller” or MVC idea and instead consolidates its components into the “view” layer while focusing on doing it really well. React offers a few advantages over MVC frameworks, including;

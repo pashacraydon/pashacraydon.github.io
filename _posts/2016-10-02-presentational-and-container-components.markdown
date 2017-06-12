@@ -8,3 +8,5 @@ category: opinion
 ---
 
 Dan Abramov explains how to divide React components into container and presentational categories.
+
+<!-- more -->

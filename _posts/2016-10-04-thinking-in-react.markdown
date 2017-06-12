@@ -8,3 +8,5 @@ category: opinion
 ---
 
 The Facebook docs explain how to think about a React app as you build it.
+
+<!-- more -->

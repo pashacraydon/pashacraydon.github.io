@@ -8,3 +8,5 @@ category: opinion
 ---
 
 Dan Abramov writes on using classes while avoiding there pitfalls.
+
+<!-- more -->

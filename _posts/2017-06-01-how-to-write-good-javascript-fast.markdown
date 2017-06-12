@@ -5,7 +5,9 @@ date:   2017-06-01 13:15:34 -0700
 category: article
 ---
 
-Do you write most of your javaScript by making sure it runs first in the browser, adding `debugger` and `console.log` statements along the way. If so, you may be hindering the speed you write javaScript and the quality of your code. 
+Do you write most of your javaScript by making sure it runs first in the browser, adding `debugger` and `console.log` statements along the way. If so, you may be hindering the speed at which you write javaScript and the quality of your code.
+
+<!-- more -->
 
 ## Tunnel code
 
@@ -15,9 +17,11 @@ It can be easy to look at writing code as just a series of solving problems wher
 
 You may be tempted to believe this is the fastest way to write javaScript. 
 
-How much time do you lose tracking down bugs you do not entirely understand, just to get the thing working. I bet it is a lot.
+How much time do you lose tracking down bugs you do not entirely understand, just to get the thing working.
 
-How often do you get frustrated because your code is broken and if you could just figure out why then you could move on to the next problem and also why is the browser taking so long to load. I bet it is a lot.
+How often do you get frustrated because your code is broken and if you could just figure out why then you could move on to the next problem and also why is the browser taking so long to load.
+
+I bet it is a lot.
 
 ## Greater vision
 
@@ -43,13 +47,25 @@ These problems are much easier to discover and fix with tests then in the browse
 
 I recommend many, short tests over a few, large tests. Nothing is too dumb to test. It is often the obvious, simple things which have bugs.
 
+## How
+
+The test-driven development process has three steps;
+
+1. Write a test that fails.
+2. Write enough code to make the test pass.
+3. Refactor the code to tidy it up, ensure it is readable and maintainable. Run all the tests to ensure there are no regressions.
+
+The first step is important because you can accidentally write broken tests that always pass. In the second step, you focus primarily on solving the test. In the third step you focus on the quality of your code.
+
 ## Relax
 
-I believe that writing code should be fun or at least stress free. Focusing on the architecture of my code, deeply understanding it, caring about its readability and maintainability. These are fun things to me. 
+I believe that writing code should be fun or at least stress free. Using a test-driven development approach has a number of benefits that can improve your javaScript workflow and make writing it more enjoyable;
 
-You want to steer away from situations where you are putting out a bunch of fires. This is not always possible but the more you can focus on the fun things rather then only what is wrong with your code, the more stress free you will be.
+1. *Deeper understanding of your code*. Writing tests will force you to think more carefully about what you are trying to achieve. As you become more clear about your goals and the architecture of your code, it will be easier to write code.
 
-So relax. Focus on the process rather then the end result and take care of your code. You will write it much quicker and it will be much better, I guarantee it.
+2. *Slow and steady wins the race*. It sets the goal on the simple task of writing code in small chunks. You are more focused on the process rather then the end result and are more likely to write code that is deliberate and well-considered. You will gradually gain confidence in your code and the process and make fewer mistakes.
+
+3. *Faster debugging*. It will be easier to narrow the scope of bugs that show up in your code. You can be sure that you have fixed certain bugs and can look elsewhere. You can re-run your tests and have more confidence that changes you make to your code have not broken anything. 
 
 
 

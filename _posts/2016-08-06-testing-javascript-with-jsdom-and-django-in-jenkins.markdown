@@ -7,6 +7,8 @@ category: article
 
 Jsdom is an implementation of the DOM in javaScript. Here is how to set it up using python and Django for generating html fixtures, mocha for javaScript testing and sinonjs for stubs and mocks.
 
+<!-- more -->
+
 Install the packages from npm.
 
 {% highlight bash %}

@@ -14,7 +14,7 @@ $dark-green: #00ab37 !default;
 $dark-green: #009f06 !default;
 $light-pink: #ffdddd !default;
 $light-green: #ddffdd !default;
-$dark-gray: #93a1a1 !default;
+$dark-gray: $light-grey !default;
 $mid-gray: #777 !default;
 $light-gray: #ccc !default;
 $lighter-gray: #eee !default;
@@ -82,17 +82,17 @@ pre {
 
 // begin style scrollbar
 pre::-webkit-scrollbar-track {
-  background-color: #353542;
+  background-color: #444;
 }
 
 pre::-webkit-scrollbar {
   width: 12px;
-  background-color: #1c1c23;
+  background-color: #666;
 }
 
 pre::-webkit-scrollbar-thumb {
   border-radius: 10px;
-  background-color: #5f5f72;
+  background-color: #666;
 }
 // end style scrollbar
 
@@ -171,7 +171,7 @@ pre a:only-of-type::before {
 }
 
 .highlight .sr {
-  color: #93a1a1 !important;
+  color: $light-grey !important;
 }
 
 .highlight .mi,
@@ -280,8 +280,8 @@ pre {
 
 .highlight,
 .gist-syntax .highlight {
-    background-color: #111116;
-    color: #93a1a1;
+    background-color: #222;
+    color: $light-grey;
 }
 .highlight .c,
 .gist-syntax .highlight .c {
@@ -289,11 +289,11 @@ pre {
 }
 .highlight .err,
 .gist-syntax .highlight .err {
-    color: #93a1a1;
+    color: $light-grey;
 }
 .highlight .g,
 .gist-syntax .highlight .g {
-    color: #93a1a1;
+    color: $light-grey;
 }
 .highlight .k,
 .gist-syntax .highlight .k {
@@ -301,11 +301,11 @@ pre {
 }
 .highlight .l,
 .gist-syntax .highlight .l {
-    color: #93a1a1;
+    color: $light-grey;
 }
 .highlight .n,
 .gist-syntax .highlight .n {
-    color: #93a1a1;
+    color: $light-grey;
 }
 .highlight .o,
 .gist-syntax .highlight .o {
@@ -317,7 +317,7 @@ pre {
 }
 .highlight .p,
 .gist-syntax .highlight .p {
-    color: #93a1a1;
+    color: $light-grey;
 }
 .highlight .cm,
 .gist-syntax .highlight .cm {
@@ -341,7 +341,7 @@ pre {
 }
 .highlight .ge,
 .gist-syntax .highlight .ge {
-    color: #93a1a1;
+    color: $light-grey;
     font-style: italic;
 }
 .highlight .gr,
@@ -358,15 +358,15 @@ pre {
 }
 .highlight .go,
 .gist-syntax .highlight .go {
-    color: #93a1a1;
+    color: $light-grey;
 }
 .highlight .gp,
 .gist-syntax .highlight .gp {
-    color: #93a1a1;
+    color: $light-grey;
 }
 .highlight .gs,
 .gist-syntax .highlight .gs {
-    color: #93a1a1;
+    color: $light-grey;
     font-weight: bold;
 }
 .highlight .gu,
@@ -375,7 +375,7 @@ pre {
 }
 .highlight .gt,
 .gist-syntax .highlight .gt {
-    color: #93a1a1;
+    color: $light-grey;
 }
 .highlight .kc,
 .gist-syntax .highlight .kc {
@@ -403,7 +403,7 @@ pre {
 }
 .highlight .ld,
 .gist-syntax .highlight .ld {
-    color: #93a1a1;
+    color: $light-grey;
 }
 .highlight .m,
 .gist-syntax .highlight .m {
@@ -415,7 +415,7 @@ pre {
 }
 .highlight .na,
 .gist-syntax .highlight .na {
-    color: #93a1a1;
+    color: $light-grey;
 }
 .highlight .nb,
 .gist-syntax .highlight .nb {
@@ -447,19 +447,19 @@ pre {
 }
 .highlight .nl,
 .gist-syntax .highlight .nl {
-    color: #93a1a1;
+    color: $light-grey;
 }
 .highlight .nn,
 .gist-syntax .highlight .nn {
-    color: #93a1a1;
+    color: $light-grey;
 }
 .highlight .nx,
 .gist-syntax .highlight .nx {
-    color: #93a1a1;
+    color: $light-grey;
 }
 .highlight .py,
 .gist-syntax .highlight .py {
-    color: #93a1a1;
+    color: $light-grey;
 }
 .highlight .nt,
 .gist-syntax .highlight .nt {
@@ -475,7 +475,7 @@ pre {
 }
 .highlight .w,
 .gist-syntax .highlight .w {
-    color: #93a1a1;
+    color: $light-grey;
 }
 .highlight .mf,
 .gist-syntax .highlight .mf {
@@ -503,7 +503,7 @@ pre {
 }
 .highlight .sd,
 .gist-syntax .highlight .sd {
-    color: #93a1a1;
+    color: $light-grey;
 }
 .highlight .s2,
 .gist-syntax .highlight .s2 {
@@ -515,7 +515,7 @@ pre {
 }
 .highlight .sh,
 .gist-syntax .highlight .sh {
-    color: #93a1a1;
+    color: $light-grey;
 }
 .highlight .si,
 .gist-syntax .highlight .si {

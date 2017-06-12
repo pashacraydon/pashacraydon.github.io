@@ -8,3 +8,5 @@ category: video
 ---
 
 Addy Osmani speaks on building performant React apps.
+
+<!-- more -->

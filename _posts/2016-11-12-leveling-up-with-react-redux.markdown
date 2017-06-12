@@ -8,3 +8,5 @@ category: tutorial
 ---
 
 Learn React + Redux by building a simple app in a 3 part series, at CSS-Tricks.
+
+<!-- more -->

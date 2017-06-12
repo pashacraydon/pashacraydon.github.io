@@ -21,6 +21,8 @@ Example in a require module.
   });
 {% endhighlight %}
 
+<!-- more -->
+
 Somewhere else you can include this and start creating your own triggers.
 
 {% highlight javascript %}

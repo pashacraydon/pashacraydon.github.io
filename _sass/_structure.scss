@@ -85,7 +85,7 @@ img {
   li {
     border-bottom: 1px solid $base-border-color;
     position: relative;
-    margin-bottom: 20px;
+    margin-bottom: 50px;
     padding: 0.2em 0 1em;
     &:last-child {
     }
@@ -97,7 +97,6 @@ img {
     display: inline;
   }
   .category {
-    font-family: "lato", arial, sans-serif;
     background-color: rgba(0, 0, 0, 0.35);
     color: #FFF;
     font-size: 12px;
@@ -105,7 +104,6 @@ img {
     position: relative;
     top: -2px;
     left: 5px;
-    border-radius: 2px;
     text-transform: uppercase;
     &.news {
       background-color: #00c3ab;
@@ -167,11 +165,10 @@ footer {
     text-decoration: none;
     margin-left: 20px;
     a {
-      font-family: "lato", arial, sans-serif;
       text-decoration: none;
       text-transform: uppercase;
       letter-spacing: 2px;
-      padding: 38px 5px 2px;
+      padding: 35px 5px 2px;
     }
   }
 }
@@ -231,8 +228,7 @@ footer {
   .homepage .menu a.home,
   .about-page .menu a.about,
   .article-page .menu a.articles {
-    background: rgba(0, 0, 0, 0.2);
-    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    border-top: 3px solid white;
     color: white;
   }
 }

@@ -1,15 +1,19 @@
 ---
 layout: post
-title:  "My fitness journey, confessions from a software engineer"
+title:  "Fitness confessions from a software engineer"
 date:   2017-06-05 13:15:34 -0700
 category: article
 ---
 
 I entered my thirties out of shape and over weight. I had spent most of my late teens and twenties never exercising, smoking cigarettes, not thinking much about my diet and working long hours in front of a computer writing code.
 
-It was all catching up to me and I knew I needed to change. I quit smoking cold turkey, it was easy because I was so disgusted with it and myself. I cleaned up my diet and started looking into this whole exercise thing.
+It was all catching up to me and I knew I needed to change.
 
-For the past 5 years I've been on a fitness journey. This post is some of the lessons I have learned along the way and where I am today.
+<!-- more -->
+
+I quit smoking cold turkey. It was easy because I was so disgusted with myself and the habit. I cleaned up my diet and started looking into this whole exercise thing.
+
+For the past 5 years I've been on a fitness journey. This post is about some of the exercises I have tried and where I am today.
 
 ### Yoga
 

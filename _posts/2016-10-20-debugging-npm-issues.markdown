@@ -7,6 +7,8 @@ category: article
 
 I setup webpack at my company so I am often asked to debug issues other devs have with npm packages. My debug strategy is pretty straightforward;
 
+<!-- more -->
+
 * Ask for a stacktrace of the error
 * Follow it from the bottom to the top
 

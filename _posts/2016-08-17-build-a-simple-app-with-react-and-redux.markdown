@@ -8,6 +8,8 @@ I built a simple React + Redux app as a demonstration to help my company transit
 
 ![React Books](/css/images/react_books.png)
 
+<!-- more -->
+
 # Whats different about React
 
 ### You update the UI by updating the state
