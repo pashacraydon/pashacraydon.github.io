@@ -9,7 +9,7 @@ Keeping front-end tests maintainable is important. When it comes to adding featu
 
 <!-- more -->
 
-### 1. Keep tests isolated
+## 1. Keep tests isolated
 
 Tests should not care about or rely on what is outside of the component or logic being tested. Mock interactions with external services or packages to abstract away the real implementation. Code that is refactored in packages should (almost) never break any tests in apps which consume them.
 
@@ -72,11 +72,11 @@ Consider whether you are testing code that you wrote versus code that is in the 
   });
 {% endhighlight %}
 
-### 2. Keep tests specific
+## 2. Keep tests specific
 
 When a test breaks, there should be a very logical and specific failure message. Describe tests from the perspective of a developer rather than a user. For example, instead of describing a test as revealing something based on a click event, describe the specific thing the click handler should do, such as changing a state attribute.
 
-### 3. Prefer shallow over mounted tests
+## 3. Prefer shallow over mounted tests
 
 Enzyme includes two methods, each with its own API for asserting and traversing React components, called `shallow` and `mount`. 
 
