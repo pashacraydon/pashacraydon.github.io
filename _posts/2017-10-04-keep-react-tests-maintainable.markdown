@@ -17,7 +17,7 @@ Think about where tests belong. For example, let's say you are writing a test fo
 
 ### How to test code that is in a separate package
 
-It is common to use functions that are invoked as callbacks in components which are imported from separate packages. The best practice for testing such functions are to test the function then tests that you pass the function as a prop to the component. The following is an example:
+It is common to use functions that are invoked as callbacks in components which are imported from separate packages. You can test the function and you can test that you pass the function as a prop to the component. The following is an example:
 
 {% highlight javascript %}
   import { MyComponent } from separate-package;
@@ -43,7 +43,7 @@ It is common to use functions that are invoked as callbacks in components which 
   });
 {% endhighlight %}
 
-The point is that these tests never dig any further than the root level into a component that was imported from a separate package. Refactoring any code inside `MyComponent` will not indirectly break these tests unless `MyComponent` loses its `onClickHandler` callback prop, in which case one of these tests should rightly fail. 
+The point here is that these tests never dig any further than the root level into a component that was imported from a separate package. Refactoring any code inside `MyComponent` will not indirectly break these tests unless `MyComponent` loses its `onClickHandler` callback prop, in which case one of these tests should rightly fail. 
 
 In this case, you would not write a test to ensure that `MyComponent.onClickHandler` correctly invokes your callback. That test belongs within the `separate-package` package close to the `MyComponent` code because that is where its business logic resides.
 
@@ -74,7 +74,7 @@ Consider whether you are testing code that you wrote versus code that is in the 
 
 ### 2. Keep tests specific
 
-When a test breaks, there should be a very logical and specific failure message. Describe tests from the perspective of an engineer rather than a user. For example, instead of describing a test as revealing something based on a click event, describe the specific thing the click handler should do, such as changing a state attribute.
+When a test breaks, there should be a very logical and specific failure message. Describe tests from the perspective of a developer rather than a user. For example, instead of describing a test as revealing something based on a click event, describe the specific thing the click handler should do, such as changing a state attribute.
 
 ### 3. Prefer shallow over mounted tests
 
@@ -99,5 +99,5 @@ I have no hard rule against using `mount()`. Writing tests with `mount()` is sti
 
 ## Summary
 
-In short, keep tests maintainable by making sure you keep your tests isolated and free from any dependencies. Don't overcomplicate your tests by testing logic you did not write. Keep your tests specific by describing them from the perspective of an engineer. Avoid testing the logic of child components by using `shallow` methods to traverse your components.
+In short, keep tests maintainable by making sure you keep your tests isolated and free from any dependencies. Don't overcomplicate your tests by testing logic you did not write. Keep your tests specific by describing them from the perspective of a developer. Avoid testing the logic of child components by using `shallow` methods to traverse your components.
 
