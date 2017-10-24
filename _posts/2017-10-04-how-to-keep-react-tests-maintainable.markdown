@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Keep React tests maintainable"
+title:  "How to keep React tests maintainable"
 date:   2017-10-04 13:15:34 -0700
 category: article
 ---
