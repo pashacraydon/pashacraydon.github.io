@@ -134,6 +134,14 @@ pre a:only-of-type::before {
 
 .highlight {
   -webkit-text-size-adjust: none;
+  width: 130%;
+  margin-left: -15%;
+  margin-top: 2.5em;
+  margin-bottom: 2.5em;
+  @include media-query(800px) {
+    width: 100%;
+    margin-left: 0;
+  }
 }
 
 .highlight .c,
@@ -264,12 +272,12 @@ pre a:only-of-type::before {
 pre,
 code {
     font-family: Menlo, Monaco, "Courier New", monospace;
+    font-size: 17px;
+    line-height: 1.5em;
 }
 
 pre {
     padding: 1.125em;
-    font-size: 1.125rem;
-    line-height: 1.11;
     margin-bottom: 0.88em;
 }
 
@@ -280,7 +288,7 @@ pre {
 
 .highlight,
 .gist-syntax .highlight {
-    background-color: #222;
+    background-color: #022933;
     color: $light-grey;
 }
 .highlight .c,
