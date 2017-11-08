@@ -179,7 +179,7 @@ pre a:only-of-type::before {
 }
 
 .highlight .sr {
-  color: white !important;
+  color: $light-grey !important;
 }
 
 .highlight .mi,
@@ -288,8 +288,8 @@ pre {
 
 .highlight,
 .gist-syntax .highlight {
-    background-color: #2E3440;
-    color: white;
+    background-color: #022933;
+    color: $light-grey;
 }
 .highlight .c,
 .gist-syntax .highlight .c {
@@ -297,11 +297,11 @@ pre {
 }
 .highlight .err,
 .gist-syntax .highlight .err {
-    color: white;
+    color: $light-grey;
 }
 .highlight .g,
 .gist-syntax .highlight .g {
-    color: white;
+    color: $light-grey;
 }
 .highlight .k,
 .gist-syntax .highlight .k {
@@ -309,11 +309,11 @@ pre {
 }
 .highlight .l,
 .gist-syntax .highlight .l {
-    color: white;
+    color: $light-grey;
 }
 .highlight .n,
 .gist-syntax .highlight .n {
-    color: white;
+    color: $light-grey;
 }
 .highlight .o,
 .gist-syntax .highlight .o {
@@ -325,7 +325,7 @@ pre {
 }
 .highlight .p,
 .gist-syntax .highlight .p {
-    color: white;
+    color: $light-grey;
 }
 .highlight .cm,
 .gist-syntax .highlight .cm {
@@ -349,7 +349,7 @@ pre {
 }
 .highlight .ge,
 .gist-syntax .highlight .ge {
-    color: white;
+    color: $light-grey;
     font-style: italic;
 }
 .highlight .gr,
@@ -366,15 +366,15 @@ pre {
 }
 .highlight .go,
 .gist-syntax .highlight .go {
-    color: white;
+    color: $light-grey;
 }
 .highlight .gp,
 .gist-syntax .highlight .gp {
-    color: white;
+    color: $light-grey;
 }
 .highlight .gs,
 .gist-syntax .highlight .gs {
-    color: white;
+    color: $light-grey;
     font-weight: bold;
 }
 .highlight .gu,
@@ -383,7 +383,7 @@ pre {
 }
 .highlight .gt,
 .gist-syntax .highlight .gt {
-    color: white;
+    color: $light-grey;
 }
 .highlight .kc,
 .gist-syntax .highlight .kc {
@@ -411,7 +411,7 @@ pre {
 }
 .highlight .ld,
 .gist-syntax .highlight .ld {
-    color: white;
+    color: $light-grey;
 }
 .highlight .m,
 .gist-syntax .highlight .m {
@@ -423,7 +423,7 @@ pre {
 }
 .highlight .na,
 .gist-syntax .highlight .na {
-    color: white;
+    color: $light-grey;
 }
 .highlight .nb,
 .gist-syntax .highlight .nb {
@@ -455,19 +455,19 @@ pre {
 }
 .highlight .nl,
 .gist-syntax .highlight .nl {
-    color: white;
+    color: $light-grey;
 }
 .highlight .nn,
 .gist-syntax .highlight .nn {
-    color: white;
+    color: $light-grey;
 }
 .highlight .nx,
 .gist-syntax .highlight .nx {
-    color: white;
+    color: $light-grey;
 }
 .highlight .py,
 .gist-syntax .highlight .py {
-    color: white;
+    color: $light-grey;
 }
 .highlight .nt,
 .gist-syntax .highlight .nt {
@@ -483,7 +483,7 @@ pre {
 }
 .highlight .w,
 .gist-syntax .highlight .w {
-    color: white;
+    color: $light-grey;
 }
 .highlight .mf,
 .gist-syntax .highlight .mf {
@@ -511,7 +511,7 @@ pre {
 }
 .highlight .sd,
 .gist-syntax .highlight .sd {
-    color: white;
+    color: $light-grey;
 }
 .highlight .s2,
 .gist-syntax .highlight .s2 {
@@ -523,7 +523,7 @@ pre {
 }
 .highlight .sh,
 .gist-syntax .highlight .sh {
-    color: white;
+    color: $light-grey;
 }
 .highlight .si,
 .gist-syntax .highlight .si {

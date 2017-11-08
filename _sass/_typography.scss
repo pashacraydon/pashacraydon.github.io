@@ -4,30 +4,21 @@ em {
   font-size: smaller;
 }
 
-h1,
-h2, 
-h3,
-h4,
-h5 {
-  color: $black;
-}
-
 a,
 a:visited,
 a:hover {
-  color: $light-black;
+  color: $light-white;
+  border: none;
+  text-decoration: underline;
 }
 
 a:hover,
 a:visited {
-  color: $black;
+  color: white;
 }
-  
-a,
-a:visited,
-a:hover {
-  border: none;
-  text-decoration: underline;
+
+a:visited {
+  opacity: 0.65;
 }
 
 a:hover {
@@ -36,7 +27,7 @@ a:hover {
 
 a.post-link,
 a.post-link:visited {
-  font-size: 1.5em;
+  font-size: 1.75em;
   line-height: 1.2em;
   text-decoration: none;
 }
@@ -47,6 +38,11 @@ a.quick-link:visited {
   text-decoration: none;
   font-size: 28px;
   font-weight: normal;
+}
+
+.menu li a,
+.category {
+  font-family: 'Merriweather Sans', sans-serif;
 }
 
 .quick-link {
@@ -62,7 +58,16 @@ h1,
 h2,
 h3 {
   margin: 0.5em 0 0.5em;
+  color: $white;
   font-weight: 900;
+  font-family: 'Merriweather Sans', sans-serif;
+}
+
+h2 a {
+  color: $white;
+  &:hover {
+    color: $light-white;
+  }
 }
 
 .post-content {
@@ -92,10 +97,6 @@ ul li {
   margin: 5em 0 1em;
 }
 
-.slug .post-header {
-  text-align: center;
-}
-
 .post-title {
   border-bottom: 2px solid $base-border-color;
   font-size: 1.5em;
@@ -116,6 +117,7 @@ ul li {
 .post-meta {
   font-size: 21px;
   margin: 2em 0 1em;
+  font-family: 'Merriweather Sans', sans-serif;
 }
 
 .post-list {
@@ -125,11 +127,19 @@ ul li {
 }
 
 .site-header .site-lead {
+  color: $white;
   font-size: 21px;
   text-decoration: none;
   position: relative;
   top: 5px;
-  font-weight: bold;
+}
+
+footer ul li {
+  color: $light-white;
+}
+
+.post-meta {
+  color: $lightest-white;
 }
 
 .post-list li {
@@ -137,8 +147,16 @@ ul li {
 }
 
 .slug {
+  background-color: white;
+  color: $light-black;
+
+  .post-meta {
+    color: $grey;
+  }
+
   .post-pagination {
     border-top: 1px solid $base-border-light-grey;
+    font-family: 'Merriweather Sans', sans-serif;
     ul li.right {
       border-left: 1px solid $base-border-light-grey;
     }
@@ -146,6 +164,25 @@ ul li {
 
   footer ul li {
     color: $grey;
+  }
+
+  h1,
+  h2, 
+  h3,
+  h4,
+  h5 {
+    color: $black;
+  }
+
+  a,
+  a:visited,
+  a:hover {
+    color: $light-black;
+  }
+
+  a:hover,
+  a:visited {
+    color: $black;
   }
 }
 

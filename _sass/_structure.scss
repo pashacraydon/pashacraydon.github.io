@@ -14,6 +14,8 @@ body {
   color: $light-black;
   letter-spacing: -.003em;
   font-family: $base-font-family;
+  background-color: $base-background-color;
+  color: $light-white;
 }
 
 .header-hero {
@@ -227,6 +229,8 @@ footer {
   .homepage .menu a.home,
   .about-page .menu a.about,
   .article-page .menu a.articles {
+    border-top: 3px solid white;
+    color: white;
   }
 }
 

@@ -1,12 +1,12 @@
 // Our variables
-$base-font-family: helvetica;
+$base-font-family: 'Merriweather', serif;
 $base-font-size:   16px;
 $base-font-weight: 400;
 $small-font-size:  $base-font-size * 0.875;
 $base-line-height: 1.5;
 
 $base-background-color: #333;
-$base-border-color: rgba(0, 0, 0,.1);
+$base-border-color: rgba(255, 255, 255,.1);
 $base-border-light-grey: rgba(0, 0, 0,.1);
 
 $spacing-unit:     30px;
@@ -29,7 +29,7 @@ $on-laptop:        900px;
 $black:            rgba(0, 0, 0, .8);
 $light-black:      rgba(0, 0, 0, .7);
 $grey:             rgba(0, 0, 0, 0.35);
-$light-grey:       rgba(0, 0, 0, 0.75);
+$light-grey:       rgba(255, 255, 255, 0.75);
 
 $white:            rgba(255, 255, 255, .9);
 $light-white:      rgba(255, 255, 255, .7);
