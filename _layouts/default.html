@@ -7,25 +7,31 @@
     <link rel="stylesheet" href="/css/main.css">
     <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:300,800|Merriweather:300,300i" rel="stylesheet">
   </head>
-  <body class="animated fade-in-down {% if page.slug %}{{ page.slug }} slug {% else %} {% endif %} colorbg  {% if page.layout == 'default' %}homepage{% endif %} {% if page.url == '/about/' %}about-page{% endif %}{% if page.url == '/article/' %}article-page{% endif %}">
-    </div>
+  <body class="{% if page.slug %}{{ page.slug }} slug {% else %} {% endif %} colorbg  {% if page.layout == 'default' %}homepage{% endif %}">
+
     <header class="site-header">
-      <div class="info">
-        <a href="/" class="site-lead">pasha.craydon</a>
-        <ul class="menu">
-          <li>
-            <a href="/" class="home">Home</a>
-          </li>
-          <li>
-            <a href="/article" class="articles">Articles</a>
-          </li>
-          <li>
-            <a href="/about" class="about">About</a>
-          </li>
-        </ul>
-      </div>
+      <a href="/" class="site-lead">pasha.craydon</a>
     </header>
+
+    {% if page.layout == 'default' %}
+      <div class="fake-column"></div>
+      <div class="info-lead">
+        <div class="about-photo">
+          <img src="/css/images/pc.jpg" />
+        </div>
+
+        <p><strong>Hi! I'm Pasha.</strong><br />I am a web developer in Northern California. I write about JavaScript, software development, and developer tools.</p>
+
+        <p>I currently write javaScript for <a href="http://www.oreilly.com/" target="blank">O'Reilly</a> where I am building tools for online learning and reading. Previously I did similar things at <a href="http://www.safaribooksonline.com" target="blank">Safari Books Online</a>.</p>
+
+        <p>You can find me on <a href="https://twitter.com/pashaithink" target="blank">twitter</a>, <a href="https://github.com/pashacraydon" target="blank">github</a></p>
+      </div>
+    {% endif %}
+
     <div class="page-content">
+      {% if page.layout == 'default' %}
+      <h3> Writings </h3>
+      {% endif %}
       {{ content }}
 
       {% include footer.html %}

@@ -1,9 +1,5 @@
 
 
-em {
-  font-size: smaller;
-}
-
 h1,
 h2, 
 h3,
@@ -11,51 +7,17 @@ h4,
 h5 {
   color: $black;
 }
-
-a,
-a:visited,
-a:hover {
-  color: $light-black;
-}
-
-a:hover,
-a:visited {
-  color: $black;
-}
   
 a,
 a:visited,
 a:hover {
-  border: none;
-  text-decoration: underline;
+  text-decoration: none;
+  color: #2455c3;
 }
 
 a:hover {
-  text-decoration: none;
-}
-
-a.post-link,
-a.post-link:visited {
-  font-size: 1.5em;
-  line-height: 1.2em;
-  text-decoration: none;
-}
-
-a.quick-link,
-a.quick-link:visited {
-  line-height: 1.5em;
-  text-decoration: none;
-  font-size: 28px;
-  font-weight: normal;
-}
-
-.quick-link {
-  p {
-    font-size: 16px;
-  }
-  h2 {
-    margin: 0;
-  }
+  color: #2455c3;
+  text-decoration: underline;
 }
 
 h1,
@@ -65,16 +27,25 @@ h3 {
   font-weight: 900;
 }
 
-.post-content {
-  h2 {
-    font-size: 26px;
-  }
+.site-header,
+.site-header a {
+  color: black;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
 
-  h3 {
-    font-size: 21px;
-    font-weight: bold;
-    margin-top: 1.5em;
-  }
+.site-header a {
+  font-weight: bold;
+}
+
+.site-header {
+  color: #999;
+  max-width: 70%;
+}
+
+.info-lead {
+  font-size: 21px;
+  line-height: 1.5em;
 }
 
 p {
@@ -82,58 +53,10 @@ p {
   font-weight: 100;
 }
 
-ul li {
-  line-height: 1.5em;
-  margin: 1em 0 1em;
-  font-weight: 100;
-}
-
-.post-header {
-  margin: 5em 0 1em;
-}
-
-.slug .post-header {
-  text-align: center;
-}
-
-.post-title {
-  border-bottom: 2px solid $base-border-color;
-  font-size: 1.5em;
-  letter-spacing: -3px;
-  font-weight: normal;
-}
-
-.slug .post-title {
-  font-size: 3.75em;
-  line-height: 1.2em;
-  margin-bottom: 0.5em;
-  text-decoration: none;
-  display: inline;
-  border-bottom: none;
-  font-weight: bold;
-}
-
+ul li,
+.post-link,
 .post-meta {
-  font-size: 21px;
-  margin: 2em 0 1em;
-}
-
-.post-list {
-  .post-meta {
-    margin: 1em 0 0;
-  }
-}
-
-.site-header .site-lead {
-  font-size: 21px;
-  text-decoration: none;
-  position: relative;
-  top: 5px;
-  font-weight: bold;
-}
-
-.post-list li {
-  border-bottom: 1px solid $base-border-color;
+  font-size: 1.2rem;
 }
 
 .slug {

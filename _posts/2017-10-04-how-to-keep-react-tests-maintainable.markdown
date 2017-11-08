@@ -1,13 +1,12 @@
 ---
 layout: post
 title:  "How to keep React tests maintainable"
+description: "Make React tests work for you instead of against you."
 date:   2017-10-04 13:15:34 -0700
 category: article
 ---
 
 Keeping front-end tests maintainable is important. When it comes to adding features or refactoring code, you can inadvertently break more tests then you intend and suck much more time into your project then may be necessary. Here are some steps I try to follow to keep React tests helpful and easy to maintain.
-
-<!-- more -->
 
 ## 1. Keep tests isolated
 

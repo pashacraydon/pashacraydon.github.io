@@ -1,13 +1,12 @@
 ---
 layout: post
 title:  "Another Webpack Guide"
+description: "Confused by webpack? You're not alone."
 date:   2017-11-06 13:15:34 -0700
 category: article
 ---
 
 Confused by webpack? You're not alone. I often field a lot of webpack questions at work so I put together a guide.
-
-<!-- more -->
 
 # Table of Contents
 

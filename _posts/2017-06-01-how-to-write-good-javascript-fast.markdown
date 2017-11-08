@@ -1,13 +1,12 @@
 ---
 layout: post
 title:  "How to write good javaScript fast"
+description: "Fix your process, then your code."
 date:   2017-06-01 13:15:34 -0700
 category: article
 ---
 
 Do you write most of your javaScript by making sure it runs first in the browser, adding `debugger` and `console.log` statements along the way. If so, you may be hindering the speed at which you write javaScript and the quality of your code.
-
-<!-- more -->
 
 ## Tunnel code
 

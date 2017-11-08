@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  "Polling an AJAX request in React + Redux"
+description: "I solve an issue with duplicate requests by introducing polling."
 date:   2016-10-15 13:15:34 -0700
 category: article
 ---
