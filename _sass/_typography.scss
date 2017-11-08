@@ -4,25 +4,31 @@ em {
   font-size: smaller;
 }
 
+h1,
+h2, 
+h3,
+h4,
+h5 {
+  color: $black;
+}
+
 a,
 a:visited,
 a:hover {
-  color: $light-white;
-  border: none;
-  text-decoration: underline;
+  color: #0052cc;
+  text-decoration: none;
 }
 
-a:hover,
-a:visited {
-  color: white;
-}
-
-a:visited {
-  opacity: 0.65;
+a:hover {
+  color: #0065ff;
 }
 
 a:hover {
   text-decoration: none;
+}
+
+a:visited {
+  opacity: 0.65;
 }
 
 a.post-link,
@@ -30,27 +36,15 @@ a.post-link:visited {
   font-size: 1.75em;
   line-height: 1.2em;
   text-decoration: none;
+  color: $black;
 }
 
-a.quick-link,
-a.quick-link:visited {
-  line-height: 1.5em;
-  text-decoration: none;
-  font-size: 28px;
-  font-weight: normal;
-}
-
-.menu li a,
-.category {
+.menu li a {
   font-family: 'Merriweather Sans', sans-serif;
-}
-
-.quick-link {
-  p {
-    font-size: 16px;
-  }
-  h2 {
-    margin: 0;
+  color: $light-black;
+  &:hover {
+    color: $black;
+    text-decoration: underline;
   }
 }
 
@@ -58,15 +52,14 @@ h1,
 h2,
 h3 {
   margin: 0.5em 0 0.5em;
-  color: $white;
   font-weight: 900;
   font-family: 'Merriweather Sans', sans-serif;
 }
 
 h2 a {
-  color: $white;
+  color: $light-black;
   &:hover {
-    color: $light-white;
+    color: $black;
   }
 }
 
@@ -78,19 +71,16 @@ h2 a {
   h3 {
     font-size: 21px;
     font-weight: bold;
-    margin-top: 1.5em;
+    margin-top: 1em;
   }
 }
 
 p {
   margin: 0 0 1em;
-  font-weight: 100;
 }
 
 ul li {
-  line-height: 1.5em;
-  margin: 1em 0 1em;
-  font-weight: 100;
+  margin: 0;
 }
 
 .post-header {
@@ -100,7 +90,6 @@ ul li {
 .post-title {
   border-bottom: 2px solid $base-border-color;
   font-size: 1.5em;
-  letter-spacing: -3px;
   font-weight: normal;
 }
 
@@ -112,12 +101,14 @@ ul li {
   display: inline;
   border-bottom: none;
   font-weight: bold;
+  letter-spacing: -3px;
 }
 
 .post-meta {
   font-size: 21px;
   margin: 2em 0 1em;
   font-family: 'Merriweather Sans', sans-serif;
+  color: $grey;
 }
 
 .post-list {
@@ -127,62 +118,53 @@ ul li {
 }
 
 .site-header .site-lead {
-  color: $white;
   font-size: 21px;
   text-decoration: none;
   position: relative;
   top: 5px;
-}
-
-footer ul li {
-  color: $light-white;
-}
-
-.post-meta {
-  color: $lightest-white;
+  color: $black;
 }
 
 .post-list li {
   border-bottom: 1px solid $base-border-color;
 }
 
-.slug {
-  background-color: white;
-  color: $light-black;
+.page-content {
+  font-weight: 400;
+  font-size: 1.3em;
+  line-height: 1.8em;
 
-  .post-meta {
-    color: $grey;
+  h1 {
+    margin: 1em 0 0.5em;
   }
+}
 
+.slug {
   .post-pagination {
     border-top: 1px solid $base-border-light-grey;
-    font-family: 'Merriweather Sans', sans-serif;
     ul li.right {
       border-left: 1px solid $base-border-light-grey;
     }
+    a {
+      font-family: 'Merriweather Sans', sans-serif;
+      color: $light-black;
+      &:hover {
+        color: $black;
+        text-decoration: underline;
+      }
+    }
   }
+}
 
-  footer ul li {
-    color: $grey;
-  }
-
-  h1,
-  h2, 
-  h3,
-  h4,
-  h5 {
-    color: $black;
-  }
-
+footer ul li {
+  color: $grey;
   a,
-  a:visited,
-  a:hover {
-    color: $light-black;
-  }
-
-  a:hover,
   a:visited {
-    color: $black;
+    color: $light-black;
+    &:hover {
+      color: $black;
+      text-decoration: underline;
+    }
   }
 }
 

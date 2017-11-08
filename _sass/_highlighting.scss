@@ -136,8 +136,8 @@ pre a:only-of-type::before {
   -webkit-text-size-adjust: none;
   width: 130%;
   margin-left: -15%;
-  margin-top: 2.5em;
-  margin-bottom: 2.5em;
+  margin-top: 0.5em;
+  margin-bottom: 1em;
   @include media-query(800px) {
     width: 100%;
     margin-left: 0;
@@ -288,7 +288,7 @@ pre {
 
 .highlight,
 .gist-syntax .highlight {
-    background-color: #022933;
+    background-color: #2E3440;
     color: $light-grey;
 }
 .highlight .c,
