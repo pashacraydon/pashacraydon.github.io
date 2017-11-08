@@ -8,6 +8,7 @@ category: article
 Keeping front-end tests maintainable is important. When it comes to adding features or refactoring code, you can inadvertently break more tests then you intend and suck much more time into your project then may be necessary. Here are some steps I try to follow to keep React tests helpful and easy to maintain.
 
 <!-- more -->
+<span id="resume"></span>
 
 ## 1. Keep tests isolated
 
@@ -67,7 +68,7 @@ Consider whether you are testing code that you wrote versus code that is in the 
 
 {% highlight javascript %}
   test('should render', () => {
-    const wrapper = shallow(<PureMyComponent />)
+    const wrapper = shallow(<PureMyComponent />);
     expect(wrapper.find('div').exists()).toBe(true);
   });
 {% endhighlight %}

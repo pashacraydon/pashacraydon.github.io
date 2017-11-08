@@ -8,6 +8,7 @@ category: article
 When it comes to git I keep it simple. I use the basic commands which I feel are enough without getting into trouble and the helpful comments in the terminal are usually enough for me figure out what to do right.
 
 <!-- more -->
+<span id="resume"></span>
 
 {% highlight js %}
   git status

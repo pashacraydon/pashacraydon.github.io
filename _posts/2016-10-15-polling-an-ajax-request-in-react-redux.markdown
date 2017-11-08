@@ -8,6 +8,7 @@ category: article
 Problem; how to mount a React component that requires data from a webservice on many other parts of a page, many times (that also each make their own network requests) without duplicating requests.
 
 <!-- more -->
+<span id="resume"></span>
 
 ### Polling to the rescue
 

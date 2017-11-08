@@ -145,14 +145,6 @@ ul li {
     ul li.right {
       border-left: 1px solid $base-border-light-grey;
     }
-    a {
-      font-family: 'Merriweather Sans', sans-serif;
-      color: $light-black;
-      &:hover {
-        color: $black;
-        text-decoration: underline;
-      }
-    }
   }
 }
 

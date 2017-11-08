@@ -9,6 +9,7 @@ I built a simple React + Redux app as a demonstration to help my company transit
 ![React Books](/css/images/react_books.png)
 
 <!-- more -->
+<span id="resume"></span>
 
 # Whats different about React
 

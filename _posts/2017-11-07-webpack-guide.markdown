@@ -8,6 +8,7 @@ category: article
 Confused by webpack? You're not alone. I often field a lot of webpack questions at work so I put together a guide.
 
 <!-- more -->
+<span id="resume"></span>
 
 # Table of Contents
 

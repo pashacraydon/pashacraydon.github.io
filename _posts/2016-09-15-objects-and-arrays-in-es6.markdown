@@ -8,6 +8,7 @@ category: article
 ES6 has some new tools for dealing with objects and arrays. These include destructuring assignment, enhanced object literals and the spread operator. 
 
 <!-- more -->
+<span id="resume"></span>
 
 # Destructuring Assignment
 

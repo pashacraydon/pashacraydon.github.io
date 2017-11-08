@@ -8,6 +8,7 @@ category: article
 I have been using [axios](https://www.npmjs.com/package/axios) to make network requests to a webservice from a React + Redux app. For testing the requests from the React app, I have been using [axios-mock-adapter](https://www.npmjs.com/package/axios-mock-adapter). The following is the action which makes the network request that I want to test.
 
 <!-- more -->
+<span id="resume"></span>
 
 {% highlight javascript %}
   export function retrieveSingleCollection(collectionId) {

@@ -22,6 +22,7 @@ Example in a require module.
 {% endhighlight %}
 
 <!-- more -->
+<span id="resume"></span>
 
 Somewhere else you can include this and start creating your own triggers.
 

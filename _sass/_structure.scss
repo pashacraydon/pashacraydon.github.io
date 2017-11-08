@@ -74,7 +74,7 @@ img {
     border-bottom: 1px solid $base-border-color;
     position: relative;
     margin-bottom: 1em;
-    padding: 0.2em 0 0;
+    padding: 0.2em 0 1em;
     &:last-child {
       border-bottom: none;
     }
@@ -149,7 +149,6 @@ footer {
 
 .menu {
   float: right;
-  margin-top: 5px;
   li {
     display: inline-block;
     text-decoration: none;
