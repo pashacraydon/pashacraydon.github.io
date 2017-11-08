@@ -131,17 +131,10 @@ pre a:only-of-type::before {
   padding: 10px;
 }
 
-
 .highlight {
   -webkit-text-size-adjust: none;
-  width: 130%;
-  margin-left: -15%;
   margin-top: 0.5em;
   margin-bottom: 1em;
-  @include media-query(800px) {
-    width: 100%;
-    margin-left: 0;
-  }
 }
 
 .highlight .c,
