@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Another Webpack Guide"
+title:  "Webpack Guide"
 date:   2017-11-06 13:15:34 -0700
 category: article
 ---
@@ -17,7 +17,6 @@ Confused by webpack? You're not alone. I often field a lot of webpack questions 
 3. <a href="#how-to-handle-assets-like-images-and-font-files">How to handle assets like images and font files</a>
 4. <a href="#dealing-with-external-libraries">Dealing with external libraries</a>
 5. <a href="#improve-bundling-performance">Improve bundling performance</a>
-6. <a href="#how-to-alias-packages">How to alias packages</a>
 
 # Webpack Basics
 
@@ -346,20 +345,4 @@ The above example setting will bundle common libraries into a file called `vendo
 
 The above example includes an option in the `CommonsChunkPlugin` that tells it to bundle all files from `node_modules` except the packages that are listed in the `EXCLUDED_FROM_VENDOR` array.
 
-# How to alias packages
-
-You can create aliases to make it easier to `import` or `require` packages with long relative paths.
-
-{% highlight javascript %}
-  alias: {
-    Packages: path.resolve(__dirname, 'src/packages/'),
-    Templates: path.resolve(__dirname, 'src/templates/')
-  }
-{% endhighlight %}
-
-Now you can use this alias in your imports.
-
-{% highlight javascript %}
-  import MyPackage from 'Packages/MyPackage';
-{% endhighlight %}
 
