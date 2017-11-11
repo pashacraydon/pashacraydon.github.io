@@ -14,15 +14,14 @@ layout: default
             </span>
           {% endif %}
         </p>
-
-        <h2>
+         <h2>
           {% if post.category == "article" %}
             <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title | escape }}</a>
           {% else %}
             <a class="quick-link" href="{{ post.link }}">{{ post.title | escape }} &#8594;</a>
           {% endif %}
         </h2>
-        {{ post.excerpt }}
+        {{ post.content }}
       </li>
     {% endfor %}
   </ul>
@@ -30,17 +29,17 @@ layout: default
 <!-- Pagination links -->
 <div class="pagination">
   {% if paginator.previous_page %}
-    <a href="{{ paginator.previous_page_path }}" class="previous">&#8592; Newer</a>
+    <a href="{{ paginator.previous_page_path }}" class="previous">&#8249; Newer</a>
   {% else %}
-    <span class="previous">&#8592; Newer</span>
+    <span class="previous">&#8249; Newer</span>
   {% endif %}
   <!--
   <span class="page_number ">Page: {{ paginator.page }} of {{ paginator.total_pages }}</span>
   -->
   {% if paginator.next_page %}
-    <a href="{{ paginator.next_page_path }}" class="next">Older &#8594;</a>
+    <a href="{{ paginator.next_page_path }}" class="next">Older &#8250;</a>
   {% else %}
-    <span class="next ">Older &#8594;</span>
+    <span class="next ">Older &#8250;</span>
   {% endif %}
 </div>
 

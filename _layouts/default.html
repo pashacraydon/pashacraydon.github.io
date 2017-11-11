@@ -8,9 +8,12 @@
     <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:300,800|Merriweather:300,300i" rel="stylesheet">
   </head>
   <body class="animated fade-in-down {% if page.slug %}{{ page.slug }} slug {% else %} {% endif %} colorbg  {% if page.layout == 'default' %}homepage{% endif %} {% if page.url == '/about/' %}about-page{% endif %}{% if page.url == '/article/' %}article-page{% endif %}">
-    </div>
-    <header class="site-header">
-      <div class="info">
+
+    <div class="content-wrapper">
+      <header class="site">
+        <div class="image-wrapper">
+          <img src="/css/images/pc.jpg" class="me" />
+        </div>
         <a href="/" class="site-lead">Pasha Craydon</a>
         <ul class="menu">
           <li>
@@ -23,12 +26,24 @@
             <a href="/about" class="about">About</a>
           </li>
         </ul>
-      </div>
-    </header>
-    <div class="page-content">
-      {{ content }}
 
-      {% include footer.html %}
+        <h2>Recent Posts</h2>
+        <ul class="recent-posts">
+          {% for post in site.posts %}
+            <li>
+              {% if post.category == "article" %}
+                 <a href="{{ post.url | prepend: site.baseurl }}">
+               {{ post.title | escape }}</a>
+              {% endif %}
+            </li>
+          {% endfor %}
+        </ul>
+      </header>
+      <div class="page-content">
+        {{ content }}
+
+        {% include footer.html %}
+      </div>
     </div>
   </body>
 </html>
