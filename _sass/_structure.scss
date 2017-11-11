@@ -48,6 +48,16 @@ header.site a:visited {
   margin-top: 3em;
 }
 
+li.list-item {
+  border-bottom: 1px solid #EEE;
+  padding-bottom: 1em;
+  margin-bottom: 2.5em;
+  list-style-type: none;
+  &:last-child {
+    border-bottom: none;
+  }
+}
+
 img.me {
   border-radius: 200px;
   height: 100px;
@@ -93,7 +103,29 @@ footer {
 
 
 @include media-query(800px) {
+  header.site {
+    width: 100%;
+    text-align: center;
+    img.me {
+      display: block;
+    }
+    .recent-posts,
+    h2 {
+      display: none;
+    }
+  }
 
+  .menu {
+    margin-top: 1em;
+  }
+
+  .page-content {
+    width: 100%;
+  }
+
+  .content-wrapper {
+    margin-top: 20px;
+  }
 }
 
 @media only screen and (min-width: 600px) {

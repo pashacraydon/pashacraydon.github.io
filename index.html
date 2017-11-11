@@ -5,14 +5,9 @@ layout: default
 <div class="home">
   <ul class="post-list">
     {% for post in paginator.posts %}
-      <li {% if post.category != "article" %}class="quick-link"{% endif %}>
+      <li class="{% if post.category != "article" %} quick-link{% endif %} list-item">
         <p class="post-meta">
           {{ post.date | date: "%b %-d, %Y" }}
-          {% if post.category %}
-            <span class="category {{ post.category }}">
-              <a href="/{{post.category}}">{{ post.category }}</a>
-            </span>
-          {% endif %}
         </p>
          <h2>
           {% if post.category == "article" %}
