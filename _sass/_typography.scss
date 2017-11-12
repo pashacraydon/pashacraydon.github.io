@@ -43,6 +43,26 @@ h2 a.quick-link:visited {
   }
 }
 
+header.site {
+  a:link {
+    color: $black;
+    &:hover {
+      color: $grey;
+    }
+  }
+  a:visited {
+    color: #AAA;
+  }
+
+  a.site-lead {
+    &:link,
+    &:visited,
+    &:hover {
+      color: $black;
+    }
+  }
+}
+
 a,
 a:visited,
 a:hover {
@@ -87,7 +107,7 @@ h2 a {
 }
 
 p, ul, ol, li > ol {
-  margin: 0 0 1em;
+  margin: 0 0 1.5em;
 }
 ul li {
   list-style-type: disc;

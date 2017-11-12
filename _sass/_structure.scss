@@ -21,6 +21,17 @@ img {
   margin: 0 auto;
 }
 
+img {
+  &.left {
+    width: calc(50% - 2px);
+    float: left;
+  }
+  &.right {
+    width: calc(50% - 2px);
+    float: right;
+  }
+}
+
 .content-wrapper {
   box-sizing: border-box;
   margin: 80px auto 0;
@@ -34,14 +45,6 @@ header.site {
   float: left;
   text-align: right;
   font-family: 'Merriweather Sans', sans-serif;
-}
-
-header.site a:link,
-header.site a:visited {
-  color: $black;
-  &:hover {
-    color: $light-black;
-  }
 }
 
 .menu {

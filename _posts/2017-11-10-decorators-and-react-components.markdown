@@ -39,3 +39,35 @@ The following is a very simple example of simply outputting the decoratored comp
 {% endhighlight %}
 
 Every instance of `<Car />` will now output its props to the console.
+
+### Arguments
+
+Taking this example further, we can pass arguments to the decorator. In this example, the decorator accepts a callback function which we use to pass in the function `warn` which simply outputs the components props via `console.warn`.
+
+{% highlight javascript %}
+  import React, { Component } from 'react';
+
+  function debugDecorator(callback) {
+    return DecoratedClass => class extends Component {
+      render() {
+        callback(this.props);
+        return <DecoratedClass {...this.props} />;
+      }
+    };
+  }
+
+  const warn = (props) => console.warn(props);
+
+  @debugDecorator(warn)
+  export default class Car extends Component {
+    render() {
+      return (
+        <div>
+          <h2>This is a car. Zoom.</h2>
+        </div>
+      );
+    }
+  }
+{% endhighlight %}
+
+
