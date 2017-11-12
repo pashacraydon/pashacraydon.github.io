@@ -54,6 +54,10 @@ header.site {
     color: #AAA;
   }
 
+  .menu a:visited {
+    color: $black;
+  }
+
   a.site-lead {
     &:link,
     &:visited,

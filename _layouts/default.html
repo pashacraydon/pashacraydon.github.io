@@ -17,10 +17,18 @@
         <a href="/" class="site-lead">Pasha Craydon</a>
         <ul class="menu">
           <li>
-            <a href="/" class="home">Home</a>
+            {% if page.layout == 'default' %}
+              &#8594; Home
+            {% else %}
+              <a href="/">Home</a>
+            {% endif %}
           </li>
           <li>
-            <a href="/about" class="about">About</a>
+            {% if page.url == '/about/' %}
+              &#8594; About
+            {% else %}
+              <a href="/about">About</a>
+            {% endif %}
           </li>
         </ul>
 
