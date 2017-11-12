@@ -51,6 +51,23 @@ header.site {
   margin-top: 3em;
 }
 
+.social-media {
+  li {
+    display: inline-block;
+    margin-left: 2px;
+    img {
+      border-radius: 150px;
+      border: 1px solid $light-grey;
+      width: 28px;
+      opacity: 0.6;
+      &:hover {
+        border: 1px solid $grey;
+        opacity: 1;
+      }
+    }
+  }
+}
+
 li.list-item {
   border-bottom: 1px solid #EEE;
   padding-bottom: 1em;
