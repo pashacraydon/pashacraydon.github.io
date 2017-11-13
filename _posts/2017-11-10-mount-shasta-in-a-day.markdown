@@ -1,11 +1,11 @@
 ---
 layout: post
-title:  "Mount Shasta in one day"
+title:  "Mount Shasta in a day"
 date:   2017-11-09 13:15:34 -0700
 category: article
 ---
 
-I winced as tree branches drove long scratches into the paint of my newish 16 honda civic. I was 6 miles down a rough dirt road that was gradually getting much worse and causing me some anxiety due to the low clearance of my vehicle. In the distance rose Mount Shasta, all 14,179 feet of it. 
+Tree branches drove long scratches into the paint of my newish 16 honda civic. Driving close to the shoulder was my best bet to avoid the deep trenches carved out by more capable vehicles that mine would surely bottom out on. I was 6 miles down a rough dirt road that was gradually getting much worse and causing me some anxiety due to the low clearance of my vehicle. In the distance rose Mount Shasta, all 14,179 feet of it. 
 
 The last remaining members of our group, two girls, had just dropped out of the trip due to conditions on the mountain. A few winter storms had blown through the past couple of weeks and left snow on the mountain which could make climbing the mountain a little dangerous. Park rangers had warned the climbing season was probably over. 
 
@@ -23,7 +23,7 @@ Past the tree line we came upon a spring. The water came bubbling straight out o
 
 <img src="/css/images/shasta/spring.jpg" />
 
-The landscape was beginning to get much more desolate, inhabitated only by rock, ice and small trees. The trail was about to get much more difficult, Marco warned and he covered his face in a balaclava. Soon enough the trail was straight up through scree with quick elevation gain. This was a little like doing stair master on difficult and it would last for many hours, maybe 6 hours. For every three steps you move up you would slide down one. It was fairly exhausting and would really test us, particularly as the altitude started to hit.
+The landscape was beginning to get much desolate, inhabited only by rock, ice and small trees. The trail was about to get much more difficult, Marco warned and he covered his face in a balaclava. Soon enough the trail was straight up through scree with quick elevation gain. This was a little like doing stair master on difficult and it would last for many hours, maybe 6 hours. For every three steps you move up you would slide down one. It was fairly exhausting and would really test us, particularly as the altitude started to hit.
 
 <img src="/css/images/shasta/balaclava.jpg" class="left" />
 <img src="/css/images/shasta/scree.jpg" class="right" />
@@ -32,7 +32,7 @@ The landscape was beginning to get much more desolate, inhabitated only by rock,
 
 <p style="clear:both;"></p>
 
-We ran into two other hikers, a young couple. They thought that they would summit by 2 pm or so and be back down the mountain before sunset. Marco quickly corrected them. At best they would summit by sunset and be descending in the dark. This was our goal and we were prepared for the descent with headlamps but I think it scared them and they eventually turned around before they would have to face hiking in the dark.
+We ran into two other hikers, a young couple. They thought that they would summit by 2 pm or so and be back down the mountain before sunset. Marco corrected them. At best they would summit by sunset and be descending in the dark. This was our goal and we were prepared for the descent with headlamps but I think it scared them and they eventually turned around before they would have to face hiking in the dark.
 
 <img src="/css/images/shasta/travelers.jpg" />
 
@@ -60,7 +60,7 @@ It must have been about 3pm when we made it to red rock. The landscape was much 
 
 <p style="clear:both;"></p>
 
-We entered a landscape with big boulders that required some class 2 scrambling. This was a welcome change as I found it much easier then the strenuous trudge through scree. The landscape started to level out when we could finally see the highest point on Shasta. Marco cautioned that while it looked close, we were still a few hours away from it.
+We entered a landscape with big boulders that required some class 2 scrambling. This was a welcome change as I found it much easier than the strenuous trudge through scree. The landscape started to level out when we could finally see the highest point on Shasta. Marco cautioned that while it looked close, we were still a few hours away from it.
 
 <img src="/css/images/shasta/landscape.jpg" class="left" />
 <img src="/css/images/shasta/summitindistance.jpg" class="right" />
@@ -69,7 +69,7 @@ We entered a landscape with big boulders that required some class 2 scrambling. 
 
 <p style="clear:both;"></p>
 
-It was about 5pm when we reached the final plateau closest to the summit. Reaching this area I was immediately hit by a wave of sensations. First, there was a very pungent sulfur smell in the air from volcanic springs that came out of the mountain. This reminded me that this was still an active volcanic area. Second, the air must have been much thinner here because the altitude had a much stronger affect on me. I felt more light headed and had a brief moment of panic as I stopped and considered turning back. I decided I felt well enough to push to the summit but continued very slowly. 
+It was about 5pm when we reached the final plateau closest to the summit. I was immediately hit by a wave of sensations. First, there was a very pungent sulfur smell in the air from volcanic springs that came out of the mountain. This reminded me that this was still an active volcanic area. Second, the air must have been much thinner here because the altitude had a much stronger affect on me. I felt more light headed and I had a brief moment of panic as I stopped and considered turning back. I decided I felt well enough to push to the summit but I continued very slowly. 
 
 <img src="/css/images/shasta/shasta.jpg" />
 
