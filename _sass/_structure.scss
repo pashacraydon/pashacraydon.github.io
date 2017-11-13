@@ -1,4 +1,3 @@
-
 // Minima also includes a mixin for defining media queries.
 // Use media queries like this:
 // @include media-query($on-palm) {
@@ -16,121 +15,90 @@ body {
   background-color: $base-background-color;
 }
 
-.header-hero {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 550px;
-  overflow: hidden;
-  text-align: center;
-  z-index: -1;
-  p {
-    margin: 0;
-  }
-  .inner {
-    position: absolute;
-    left: 0;
-    top: 0;
-    height: 100%;
-    width: 100%;
-  }
-}
-
-
-
 img {
   border: 1px solid #E3EDF3;
   display: block;
   margin: 0 auto;
 }
 
-
-.site-header {
-  border: none;
-  min-height: auto;
-  padding: 2em 0 2em;
-}
-
-.about-page {
-  .photo {
-    max-width: 300px;
+img {
+  &.left {
+    width: calc(50% - 2px);
+    float: left;
+  }
+  &.right {
+    width: calc(50% - 2px);
     float: right;
-    img {
-      border-radius: 200px;
-    }
   }
 }
 
-.site-header,
-.page-content {
-  margin: 0 auto;
-  width: 50%;
-  max-width: 920px;
+.content-wrapper {
+  box-sizing: border-box;
+  margin: 80px auto 0;
+  max-width: 1080px;
+  padding: 0 40px;
 }
 
-.post-list {
+header.site {
+  width: 200px;
+  padding-right: 50px;
+  float: left;
+  text-align: right;
+  font-family: 'Merriweather Sans', sans-serif;
+}
+
+.menu {
+  margin-top: 3em;
+}
+
+.social-media {
   li {
-    border-bottom: 1px solid $base-border-color;
-    position: relative;
-    margin-bottom: 1em;
-    padding: 0.2em 0 1em;
-    &:last-child {
-      border-bottom: none;
-    }
-    &:first-child {
-    }
-  }
-  .category,
-  .post-link {
-    display: inline;
-  }
-  .category {
-    background-color: rgba(0, 0, 0, 0.35);
-    color: #FFF;
-    font-size: 12px;
-    padding: 2px 5px 2px;
-    position: relative;
-    top: -2px;
-    left: 5px;
-    text-transform: uppercase;
-    border-radius: 2px;
-    &.news {
-      background-color: #00c3ab;
-    }
-    &.tutorial {
-      background-color: #e0cd02;
-    }
-    &.opinion {
-      background-color: #9164ff;
-    }
-    &.code {
-      background-color: #88B4FF;
-    }
-    &.tip {
-      background-color: #CCC;
-    }
-    &.video {
-      background-color: #15c61e;
-    }
-    &.ebook {
-      background-color: #4286f4;
-    }
-    &.article {
-      background-color: rgba(0,0,0,.4);
-    }
-    a,
-    a:visited {
-      color: #FFF;
-      font-size: 11px;
+    display: inline-block;
+    margin-left: 2px;
+    img {
+      border-radius: 150px;
+      border: 1px solid $light-grey;
+      width: 28px;
+      opacity: 0.6;
+      &:hover {
+        border: 1px solid $grey;
+        opacity: 1;
+      }
     }
   }
+}
+
+li.list-item {
+  border-bottom: 1px solid #EEE;
+  padding-bottom: 1em;
+  margin-bottom: 2.5em;
+  list-style-type: none;
+  &:last-child {
+    border-bottom: none;
+  }
+}
+
+img.me {
+  border-radius: 200px;
+  height: 100px;
+  display: inline;
+}
+
+.image-wrapper {
+  text-align: right;
+  margin-bottom: 0.5em;
+}
+
+.page-content {
+  width: calc(100% - 250px);
+  float: right;
+  padding: 0;
 }
 
 footer {
   font-size: smaller;
   padding: 1em 0 0;
-  margin: 3em 0 4em;
+  margin: 10em 0 4em;
   float: left;
   width: 100%;
   font-size: 13px;
@@ -145,22 +113,6 @@ footer {
   }
 }
 
-
-
-.menu {
-  float: right;
-  li {
-    display: inline-block;
-    text-decoration: none;
-    margin-left: 20px;
-    a {
-      text-decoration: none;
-      padding: 35px 5px 2px;
-    }
-  }
-}
-
-
 .left {
   float: left;
 }
@@ -169,72 +121,39 @@ footer {
   float: right;
 }
 
-@include media-query(1450px) {
-  .site-header,
-  .page-content {
-    margin: 0 auto;
-    width: 60%;
-  }
-}
-
-@include media-query(1000px) {
-  .site-header,
-  .page-content {
-    margin: 0 auto;
-    width: 70%;
-  }
-  .slug .post-title {
-    font-size: 3em;
-  }
-}
-
 
 @include media-query(800px) {
-  .post-title {
-    background: transparent none no-repeat scroll 0 0 !important;
-  }
-  .site-header,
-  .page-content {
-    margin: 0 auto;
-    width: 90%;
-  }
-
-  .post-header {
-    padding: 0 !important;
-    .post-meta {
-      margin: 2em 0 2em !important;
+  header.site {
+    width: 100%;
+    text-align: center;
+    img.me {
+      display: block;
+    }
+    .recent-posts,
+    h2 {
+      display: none;
     }
   }
 
-  .header-hero {
-    display: none;
+  .menu {
+    margin-top: 1em;
+  }
+
+  .page-content {
+    width: 100%;
+  }
+
+  .content-wrapper {
+    margin-top: 20px;
   }
 }
 
 @media only screen and (min-width: 600px) {
-  .homepage .menu a.home,
-  .about-page .menu a.about,
-  .article-page .menu a.articles {
-  }
+
 }
 
 @include media-query(601px) {
-  .homepage .menu a.home,
-  .about-page .menu a.about,
-  .article-page .menu a.articles {
-  }
 
-  .menu {
-    li {
-      display: block;
-      margin: 0.5em 0 0.5em;
-      a,
-      a:visited,
-      a:hover {
-        padding: 0;
-      }
-    }
-  }
 }
 
 

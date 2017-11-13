@@ -5,14 +5,18 @@ layout: default
 <div class="home">
   <ul class="post-list">
     {% for post in paginator.posts %}
-      <li>
+      <li class="{% if post.category != "article" %} quick-link{% endif %} list-item">
         <p class="post-meta">
           {{ post.date | date: "%b %-d, %Y" }}
         </p>
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title | escape }}</a>
+         <h2>
+          {% if post.category == "article" %}
+            <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title | escape }}</a>
+          {% else %}
+            <a class="quick-link" href="{{ post.link }}">{{ post.title | escape }} &#8594;</a>
+          {% endif %}
         </h2>
-        {{ post.excerpt }} <a href="{{ post.url | prepend: site.baseurl }}#resume">Continue reading &#x2192;</a>
+        {{ post.content }}
       </li>
     {% endfor %}
   </ul>
@@ -20,17 +24,17 @@ layout: default
 <!-- Pagination links -->
 <div class="pagination">
   {% if paginator.previous_page %}
-    <a href="{{ paginator.previous_page_path }}" class="previous">&#x2190; Newer</a>
+    <a href="{{ paginator.previous_page_path }}" class="previous">&#8249; Newer</a>
   {% else %}
-    <span class="previous">&#x2190; Newer</span>
+    <span class="previous">&#8249; Newer</span>
   {% endif %}
   <!--
   <span class="page_number ">Page: {{ paginator.page }} of {{ paginator.total_pages }}</span>
   -->
   {% if paginator.next_page %}
-    <a href="{{ paginator.next_page_path }}" class="next">Older &#x2192;</a>
+    <a href="{{ paginator.next_page_path }}" class="next">Older &#8250;</a>
   {% else %}
-    <span class="next ">Older &#x2192;</span>
+    <span class="next ">Older &#8250;</span>
   {% endif %}
 </div>
 

@@ -22,8 +22,6 @@ How much time do you lose tracking down bugs you do not entirely understand, jus
 
 How often do you get frustrated because your code is broken and if you could just figure out why then you could move on to the next problem and also why is the browser taking so long to load.
 
-I bet it is a lot.
-
 ## Greater vision
 
 I challenge you to set your gaze higher. Forget about whether or not your code actually works in the browser, that can come later. In fact, forget about the browser altogether at first.

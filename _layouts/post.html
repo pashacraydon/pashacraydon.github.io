@@ -4,6 +4,9 @@ layout: default
 
 <article class="post container" itemscope itemtype="http://schema.org/BlogPosting">
   <header class="post-header">
+    <p class="post-meta">
+      <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time>
+    </p>
     {% if page.category == "article" %}
       <h1 class="post-title" itemprop="name headline">
         {{ page.title }}
@@ -11,9 +14,6 @@ layout: default
     {% else %}
       <h2><a href="{{ page.link }}">{{ page.title | escape }} &#8594;</a></h2>
     {% endif %}
-    <p class="post-meta">
-      <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time>
-    </p>
   </header>
   <div class="post-content article-body" itemprop="articleBody">
     {{ content }}
@@ -24,12 +24,12 @@ layout: default
   <ul>
     {% if page.previous.url %}  
       <li class="left">
-        <a class="prev" href="{{page.previous.url}}">&#8592; {{page.previous.title}}</a> 
+        <a class="prev" href="{{page.previous.url}}">&#8249; {{page.previous.title}}</a> 
       </li>
     {% endif %}  
     {% if page.next.url %}
       <li class="right">
-        <a class="next" href="{{page.next.url}}">{{page.next.title}} &#8594;</a>  
+        <a class="next" href="{{page.next.url}}">{{page.next.title}} &#8250;</a>  
       </li>
     {% endif %} 
   </ul> 

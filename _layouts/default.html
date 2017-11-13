@@ -8,24 +8,74 @@
     <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:300,800|Merriweather:300,300i" rel="stylesheet">
   </head>
   <body class="animated fade-in-down {% if page.slug %}{{ page.slug }} slug {% else %} {% endif %} colorbg  {% if page.layout == 'default' %}homepage{% endif %} {% if page.url == '/about/' %}about-page{% endif %}{% if page.url == '/article/' %}article-page{% endif %}">
-    </div>
-    <header class="site-header">
-      <div class="info">
+
+    <div class="content-wrapper">
+      <header class="site">
+        <div class="image-wrapper">
+          <img src="/css/images/pc.jpg" class="me" />
+        </div>
         <a href="/" class="site-lead">Pasha Craydon</a>
         <ul class="menu">
           <li>
-            <a href="/" class="home">Home</a>
+            {% if page.layout == 'default' %}
+              &#8594;
+            {% endif %}
+              <a href="/"> Home</a>
           </li>
           <li>
-            <a href="/about" class="about">About</a>
+            {% if page.url == '/about/' %}
+              &#8594; About
+            {% else %}
+              <a href="/about">About</a>
+            {% endif %}
           </li>
         </ul>
-      </div>
-    </header>
-    <div class="page-content">
-      {{ content }}
 
-      {% include footer.html %}
+        <ul class="social-media">
+          <li>
+            <a href="https://twitter.com/pashaithink" target="_blank">
+              <img src="/css/images/socialmedia/twitter.png" />
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/pashacraydon" target="_blank">
+              <img src="/css/images/socialmedia/github.png" />
+            </a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com/pashasc/" target="_blank">
+              <img src="/css/images/socialmedia/instagram.png" />
+            </a>
+          </li>
+          <li>
+            <a href="https://www.facebook.com/pasha.sc" target="_blank">
+              <img src="/css/images/socialmedia/facebook.png" />
+            </a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/in/pasha-s-craydon-a965b537/" target="_blank">
+              <img src="/css/images/socialmedia/linkedin.png" />
+            </a>
+          </li>
+        </ul>
+
+        <h2>Recent Posts</h2>
+        <ul class="recent-posts">
+          {% for post in site.posts %}
+            <li>
+              {% if post.category == "article" %}
+                 <a href="{{ post.url | prepend: site.baseurl }}">
+               {{ post.title | escape }}</a>
+              {% endif %}
+            </li>
+          {% endfor %}
+        </ul>
+      </header>
+      <div class="page-content">
+        {{ content }}
+
+        {% include footer.html %}
+      </div>
     </div>
   </body>
 </html>
