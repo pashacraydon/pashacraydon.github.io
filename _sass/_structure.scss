@@ -16,12 +16,7 @@ body {
 }
 
 img {
-  border: 1px solid #E3EDF3;
-  display: block;
-  margin: 0 auto;
-}
-
-img {
+  margin-top: 4px;
   &.left {
     width: calc(50% - 2px);
     float: left;
