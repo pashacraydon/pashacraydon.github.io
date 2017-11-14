@@ -32,11 +32,23 @@ img {
   }
 }
 
+.images-wrapper {
+  width: 130%;
+  margin-left: -30%;
+  margin-bottom: 30px;
+  box-shadow: -30px -40px 100px #fff;
+  float: left;
+  @include media-query(800px) {
+    width: calc(100% + 40px);
+    margin-left: -20px;
+  }
+}
+
 .content-wrapper {
   box-sizing: border-box;
   margin: 80px auto 0;
   max-width: 1080px;
-  padding: 0 40px;
+  padding: 0 20px;
 }
 
 header.site {
@@ -119,6 +131,14 @@ footer {
 
 .right {
   float: right;
+}
+
+.recent-posts {
+  &:hover {
+    background-color: white;
+    z-index: 1;
+    position: relative;
+  }
 }
 
 
