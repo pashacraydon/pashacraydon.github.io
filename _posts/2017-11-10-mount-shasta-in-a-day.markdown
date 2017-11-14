@@ -5,7 +5,7 @@ date:   2017-11-09 13:15:34 -0700
 category: article
 ---
 
-Tree branches carved long scratches into the paint of my newish 16 Honda Civic. Driving close to the shoulder was my best bet to avoid the trenches carved out by more capable vehicles that mine would surely bottom out on. I was 6 miles down a rough dirt road that was getting worse and causing me some anxiety due to the low clearance of my vehicle. In the distance rose Mount Shasta, all 14,179 feet of it. 
+Tree branches carved long scratches into the paint of my Honda Civic. Driving close to the shoulder was my best bet to avoid the trenches carved out by more capable vehicles that mine would surely bottom out on. I was 6 miles down a rough dirt road that was getting worse and causing me some anxiety due to the low clearance of my vehicle. In the distance rose Mount Shasta, all 14,179 feet of it. 
 
 The remaining members of our group, two girls, had just dropped out of the trip due to conditions on the mountain. A few winter storms had blown through the past couple of weeks and left snow on the mountain which could make climbing it more dangerous. Rangers had warned the climbing season was probably over.
 
