@@ -34,8 +34,6 @@ The landscape was beginning to get desolate, inhabited only by rock, ice and sma
 
 We ran into two other hikers, a young couple. They thought that they would summit by 2 pm or so and be back down the mountain before sunset. Marco corrected them. At best they would summit by sunset and be descending in the dark. This was our goal and we were prepared for the descent with headlamps but I think it scared them and they eventually turned around before they would have to face hiking in the dark.
 
-<img src="/css/images/shasta/travelers.jpg" />
-
 Marco would point out landmarks in the distance, small peaks or big boulders and cautioned me that while they appeared close, they were still many hours away. 
 
 The trail gained more of a steep angle and the scree became tougher. Trudging up it was a little like doing stair master on difficult and it would last for many hours. For every three steps you moved up you would slide down one. It was fairly exhausting and would really test us, particularly as the altitude began to hit.
