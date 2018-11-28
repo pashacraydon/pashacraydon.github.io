@@ -51,7 +51,6 @@ header.site {
   padding-right: 50px;
   float: left;
   text-align: right;
-  font-family: 'Merriweather Sans', sans-serif;
 }
 
 .menu {
@@ -89,6 +88,8 @@ img.me {
   border-radius: 200px;
   height: 100px;
   display: inline;
+  border: 1px solid #ddd;
+  padding: 5px;
 }
 
 .image-wrapper {
